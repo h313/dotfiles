@@ -1,0 +1,136 @@
+[colors]
+background = #1D1F21
+foreground = #C5C8C6
+primary = #ffb52a
+alert = #bd2c40
+green = #B5BD68
+blue = #81A2BE
+red = #CC6666
+purple = #B293BB
+
+[bar/h313]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 40
+;offset-x = 1%
+;offset-y = 1%
+radius = 0
+fixed-center = false
+bottom = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = Consolas:size=16;2
+font-1 = FontAwesome:size=16;3
+font-2 = siji:pixelsize=14;1
+
+modules-left = i3
+modules-right = volume battery date
+
+tray-position = right
+tray-padding = 2
+;tray-transparent = true
+;tray-background = #0063ff
+
+;wm-restack = i3
+
+;override-redirect = true
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/i3]
+type = internal/i3
+enable-scroll = false
+
+label-focused = %name%
+label-focused-foreground = ${colors.green}
+label-focused-padding = 2
+
+label-unfocused = %name%
+label-unfocused-foreground = ${colors.foreground}
+label-unfocused-padding = 2
+
+label-visible = %name%
+label-visible-foreground = ${colors.blue}
+label-visible-padding = 2
+
+label-urgent = %name%
+label-urgent-foreground = ${colors.red}
+label-urgent-padding = 2
+
+label-mode = %mode%
+label-mode-padding = 2CC6666
+label-mode-foreground = ${colors.blue}
+label-mode-background = ${colors.red}
+
+pin-workspaces = true
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = " %m-%d"
+time = " %H:%M"
+
+label = %date% %time%
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume> <label-volume>
+format-muted =  0%
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+[module/battery]
+type = internal/battery
+
+battery = BAT0
+adapter = AC
+
+poll-interval = 1
+
+full-at = 95
+
+label-discharging = %percentage%%
+label-charging = %percentage%%
+label-full = %percentage%%
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+format-charging =  <label-charging>
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini
