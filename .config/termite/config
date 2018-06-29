@@ -96,5 +96,5 @@ color20 = #a59f85
 color21 = #f5f4f1
 
 [options]
-font = Consolas 14
+font = FiraCode 14
 cursor_shape = ibeam
