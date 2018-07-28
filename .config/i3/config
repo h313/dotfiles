@@ -30,7 +30,7 @@ font pango:Inconsolata 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -188,6 +188,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id compton --config ~/.config/compton.conf -b
 exec libinput-gestures-setup start
 exec blueman-applet
+exec /usr/lib/geoclue-2.0/demos/agent
 exec feh --bg-scale /usr/share/backgrounds/another_galaxy_desktop.jpg
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 exec redshift-gtk
