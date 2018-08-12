@@ -26,6 +26,9 @@ alias lr='ls -R'
 alias l='ls'
 alias mkdir='mkdir -p'
 
+export GTK_IM_MODULE=xim
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=xim
 
 if [ -n "$DESKTOP_SESSION" ];then
     eval $(gnome-keyring-daemon --start)
