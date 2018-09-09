@@ -30,7 +30,7 @@ font pango:Inconsolata 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -194,3 +194,4 @@ exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 exec redshift-gtk
 exec polybar h313
 exec ibus-daemon -drx
+exec udiskie -N -s 
