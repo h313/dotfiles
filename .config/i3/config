@@ -192,5 +192,5 @@ exec /usr/lib/geoclue-2.0/demos/agent
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 exec redshift-gtk
 exec polybar h313
-exec nitrogen --restore 
+exec feh --bg-scale /usr/share/backgrounds/another_galaxy_desktop.jpg 
 exec udiskie -N -s 
