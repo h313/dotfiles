@@ -190,7 +190,8 @@ exec libinput-gestures-setup start
 exec blueman-applet
 exec /usr/lib/geoclue-2.0/demos/agent
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
-exec redshift-gtk
 exec polybar h313
 exec feh --bg-scale /usr/share/backgrounds/another_galaxy_desktop.jpg 
+exec /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec udiskie -N -s 
+exec redshift-gtk
