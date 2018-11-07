@@ -1,3 +1,4 @@
 .ssh/*
 .aws/*
 .config/vdirsyncer/*
+.config/mutt/*
