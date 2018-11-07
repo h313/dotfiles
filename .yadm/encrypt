@@ -1,2 +1,3 @@
 .ssh/*
 .aws/*
+.config/vdirsyncer/*
