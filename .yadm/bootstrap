@@ -4,3 +4,6 @@ omf i thefuck pure
 
 # Copy over all config files in /etc
 sudo cp -r ~/.yadm/etc/* /etc/
+
+# Install stuff
+sudo pacman -S neovim i3-gaps alacritty khard khal ranger cmus
