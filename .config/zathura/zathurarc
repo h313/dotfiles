@@ -1,1 +1,11 @@
 set font "monospace normal 14"
+
+set incremental-search true
+
+set zoom-step 20
+set scroll-step 80
+
+map <C-i> zoom in
+map <C-o> zoom out
+
+set selection-clipboard clipboard
