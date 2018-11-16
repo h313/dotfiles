@@ -1,11 +1,7 @@
 [calendars]
 
-[[my_calendars_local]]
-path = ~/.calendars/*
-type = discover
-
-[[my_contacts_local]]
-path = ~/.contacts/*
+[[my_calendar]]
+path = ~/.calendars/personal
 type = discover
 
 [locale]
