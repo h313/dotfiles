@@ -1,7 +1,7 @@
 [calendars]
 
 [[my_calendar]]
-path = ~/.calendars/personal
+path = ~/.local/share/calendars/personal
 type = discover
 
 [locale]
