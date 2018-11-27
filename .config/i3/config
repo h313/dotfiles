@@ -190,7 +190,8 @@ exec libinput-gestures-setup start
 exec blueman-applet
 exec /usr/lib/geoclue-2.0/demos/agent
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
-exec polybar h313
+exec polybar laptop
+exec polybar monitor
 exec feh --bg-scale /usr/share/backgrounds/Beach.jpg
 exec /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec udiskie -N -s
