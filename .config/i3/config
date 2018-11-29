@@ -166,7 +166,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
-bindsym $mod+p exec i3lock -i /usr/share/backgrounds/kaze-0421-1152935-unsplash.png
+bindsym $mod+p exec i3lock
 bindsym Print exec scrot
 
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -181,8 +181,8 @@ client.urgent           #f92672 #98C379 #ffffff #f92672   #f92672
 client.placeholder      #000000 #000000 #ffffff #000000   #000000
 
 exec /usr/bin/dispwin -d1 /usr/share/color/icc/TPLCD.ICM
-exec xautolock -time 10 -locker "i3lock -i /usr/share/backgrounds/kaze-0421-1152935-unsplash.png
-exec xss-lock -- i3lock -i /usr/share/backgrounds/kaze-0421-1152935-unsplash.png &
+exec xautolock -time 10 -locker "i3lock
+exec xss-lock -- i3lock
 
 exec --no-startup-id nm-applet
 exec --no-startup-id compton --config ~/.config/compton.conf -b
@@ -193,7 +193,7 @@ exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 exec polybar laptop
 exec polybar monitor0
 exec polybar monitor1
-exec feh --bg-scale /usr/share/backgrounds/Beach.jpg
+exec feh --bg-scale /usr/share/backgrounds/Beach.png
 exec /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec udiskie -N -s
 exec redshift-gtk
