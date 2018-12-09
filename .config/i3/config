@@ -195,5 +195,5 @@ exec polybar monitor0
 exec polybar monitor1
 exec feh --bg-fill /usr/share/backgrounds/dunes_3000x2000.png
 exec /usr/lib/xfce4/notifyd/xfce4-notifyd
-exec udiskie -N -s
+exec udiskie -s -n
 exec redshift-gtk
