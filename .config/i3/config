@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-#font pango:Source Code Pro 8
+font pango:Fira Mono 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -193,7 +193,7 @@ exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 exec polybar laptop
 exec polybar monitor0
 exec polybar monitor1
-exec feh --bg-fill /usr/share/backgrounds/dunes_3000x2000.png
+exec feh --bg-fill /usr/share/backgrounds/solar_twins_neptune_5120x2880.png
 exec /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec udiskie -s -n
 exec redshift-gtk
