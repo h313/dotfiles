@@ -80,19 +80,19 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: monospace # should be "Menlo" or something on macOS.
+    family: "Fira Mono" # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: monospace # should be "Menlo" or something on macOS.
+    family: "Fira Mono" # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: monospace # should be "Menlo" or something on macOS.
+    family: "Fira Mono" # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Italic
 
@@ -224,7 +224,7 @@ mouse.hide_when_typing: false
 # - Block
 # - Underline
 # - Beam
-cursor.style: Underline
+cursor.style: "Beam"
 
 # Whether the cursor should be a hollow block on window focus loss
 cursor.unfocused_hollow: true
@@ -237,10 +237,10 @@ live_config_reload: true
 # You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
 # Entries in shell.args are passed unmodified as arguments to the shell.
 #
-# shell:
-#   program: /bin/bash
-#   args:
-#     - --login
+shell:
+  program: /usr/bin/fish
+# args:
+#   - --login
 
 # Key bindings
 #
