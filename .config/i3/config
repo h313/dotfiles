@@ -157,7 +157,6 @@ smart_borders on
 
 for_window [class="^Steam$"] floating enable
 for_window [class="^.*"] border pixel 2
-for_window [class="ramme"] floating enable
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
