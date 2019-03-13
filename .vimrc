@@ -5,7 +5,6 @@ set tabstop=4
 set autoindent
 set smartindent
 set mouse=a
-set spell
 
 filetype plugin on
 syntax on
