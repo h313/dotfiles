@@ -193,7 +193,6 @@ exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 exec polybar laptop
 exec polybar monitor0
 exec polybar monitor1
-exec pulseaudio --start -D
 exec feh --bg-fill /usr/share/backgrounds/solar_twins_neptune_5120x2880.png
 exec /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec udiskie -s -n

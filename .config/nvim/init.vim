@@ -24,7 +24,7 @@ let g:ycm_register_as_syntastic_checker = 1
 let g:Show_diagnostics_ui = 1
 
 let g:ycm_enable_diagnostic_signs = 1
-let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_enable_diagnostic_highlighting = 1
 let g:ycm_always_populate_location_list = 1
 let g:ycm_open_loclist_on_ycm_diags = 1
 let g:ycm_complete_in_strings = 1
