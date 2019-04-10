@@ -185,7 +185,6 @@ exec xautolock -time 10 -locker "physlock -msd"
 exec xss-lock -- "physlock -msd"
 
 exec --no-startup-id nm-applet
-exec --no-startup-id compton --config ~/.config/compton.conf -b
 exec libinput-gestures-setup start
 exec blueman-applet
 exec /usr/lib/geoclue-2.0/demos/agent
