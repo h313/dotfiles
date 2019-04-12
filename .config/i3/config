@@ -187,6 +187,7 @@ exec xss-lock -- "physlock -msd"
 exec --no-startup-id nm-applet
 exec libinput-gestures-setup start
 exec blueman-applet
+exec compton --config ~/.config/compton.conf
 exec /usr/lib/geoclue-2.0/demos/agent
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 exec polybar laptop
