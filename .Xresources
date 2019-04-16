@@ -15,4 +15,4 @@ rofi.color-normal: #00101010, f2f2f2, #00101010, #f2f2f2, #101010
 rofi.dpi: 96
 rofi.lines: 15
 
-Xcursor.size: 32
+Xcursor.size: 16
