@@ -6,13 +6,4 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-rofi.color-enabled: true
-rofi.color-window: #99101010, #f2f2f2
-
-!state             'bg',      'fg',    'bgalt',   'hlbg',  'hlfg'
-rofi.color-normal: #00101010, f2f2f2, #00101010, #f2f2f2, #101010
-
-rofi.dpi: 96
-rofi.lines: 15
-
 Xcursor.size: 16

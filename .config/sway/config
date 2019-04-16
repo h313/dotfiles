@@ -81,6 +81,8 @@ input "SynPS/2_Synaptics_TouchPad" {
 
     # start your launcher
     bindsym $mod+d exec $menu
+	
+	bindsym $mod+Shift+v exec bwmenu -- -theme /usr/share/rofi/themes/Monokai
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
