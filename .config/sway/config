@@ -17,7 +17,7 @@ set $right semicolon
 set $term alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu rofi -show drun -theme /usr/share/rofi/themes/Monokai -dpi 140
+set $menu rofi -show drun -theme /usr/share/rofi/themes/Monokai
 
 ### Output configuration
 #
@@ -226,7 +226,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 2
 bindsym XF86MonBrightnessUp exec xbacklight -inc 2
 
 bindsym $mod+p exec physlock -msd
-bindsym Print exec scrot
+bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
 
 default_border none
 gaps inner 10
@@ -234,3 +234,4 @@ gaps outer -4
 
 exec libinput-gestures-setup start
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
+exec mako
