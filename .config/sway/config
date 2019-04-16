@@ -228,8 +228,9 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 2
 bindsym $mod+p exec physlock -msd
 bindsym Print exec scrot
 
-exec /usr/bin/xfce4/notifyd/xfce4-notifyd
-exec --no-startup-id nm-applet
+default_border none
+gaps inner 10
+gaps outer -4
+
 exec libinput-gestures-setup start
-exec blueman-applet
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
