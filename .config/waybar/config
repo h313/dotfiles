@@ -20,17 +20,17 @@
   },
   "pulseaudio": {
     "format": "{icon}  {volume}%",
-  "format-bluetooth": "{icon}  {volume}%",
-  "format-muted": "",
-  "format-icons": {
-    "headphones": "",
-    "default": [
-      "",
-      ""
-    ]
-  },
-  "scroll-step": 5,
-  "on-click": "alacritty -e pulsemixer"
+	"format-bluetooth": "{icon}  {volume}%",
+	"format-muted": "",
+    "format-icons": {
+	  "headphones": "",
+	  "default": [
+		"",
+        ""
+	  ]
+	},
+	"scroll-step": 5,
+	"on-click": "alacritty -e pulsemixer"
   },
   "battery": {
     "format": "{capacity}% {icon}",

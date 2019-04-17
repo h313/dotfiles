@@ -22,7 +22,7 @@ set $menu rofi -show drun -theme /usr/share/rofi/themes/Monokai
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /usr/share/backgrounds/solar_twins_neptune_5120x2880.png fill
+output * bg /usr/share/backgrounds/colorful_destiny_green_5120x2880.png fill
 #
 # Example configuration:
 #
