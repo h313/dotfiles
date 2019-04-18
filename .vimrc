@@ -8,6 +8,7 @@ set mouse=a
 
 filetype plugin on
 syntax on
+colorscheme dracula
 
 let Tlist_Compact_Format = 1
 let Tlist_GainFocus_On_ToggleOpen = 1

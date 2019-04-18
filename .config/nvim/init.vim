@@ -8,6 +8,8 @@ set smartindent
 filetype plugin on
 syntax on
 
+colorscheme alduin
+
 let Tlist_Compact_Format = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select = 1
@@ -19,6 +21,8 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='alduin'
 
 let g:ycm_register_as_syntastic_checker = 1
 let g:Show_diagnostics_ui = 1
