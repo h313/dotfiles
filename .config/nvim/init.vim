@@ -8,7 +8,9 @@ set smartindent
 filetype plugin on
 syntax on
 
+let g:alduin_Shout_Fire_Breath = 1
 colorscheme alduin
+set termguicolors
 
 let Tlist_Compact_Format = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
