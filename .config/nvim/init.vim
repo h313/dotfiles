@@ -8,7 +8,6 @@ set smartindent
 filetype plugin on
 syntax on
 
-let g:alduin_Shout_Fire_Breath = 1
 colorscheme alduin
 set termguicolors
 

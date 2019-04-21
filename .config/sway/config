@@ -80,7 +80,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     # start your launcher
     bindsym $mod+d exec $menu
 	
-	bindsym $mod+Shift+v exec bwmenu -- -theme /usr/share/rofi/themes/gruvbox-dark-soft
+	bindsym $mod+Shift+v exec bwmenu -- -theme /usr/share/rofi/themes/Monokai
 	bindsym $mod+Shift+w exec networkmanager_dmenu
 
     # Drag floating windows by holding down $mod and left mouse button.
