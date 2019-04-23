@@ -4,6 +4,8 @@ if status is-login
     set -x QT_WAYLAND_DISABLE_WINDOWDECORATION 1
     set -x QT_QPA_PLATFORM wayland-egl
     set -x QT_WAYLAND_FORCE_DPI physical
+    set -x ORG_KDE_KWIN_SERVER_DECORATION_MANAGER_MODE_SERVER none
+    # set -x GDK_BACKEND wayland
     set -x CLUTTER_BACKEND wayland
     set -x SDL_VIDEODRIVER wayland
     set -x _JAVA_AWT_WM_NONREPARENTING 1
