@@ -16,3 +16,5 @@ if status is-login
     exec sway
   end
 end
+
+thefuck --alias | source
