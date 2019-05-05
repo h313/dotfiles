@@ -235,5 +235,5 @@ gaps outer -4
 
 exec udiskie -T -a -n
 exec libinput-gestures-setup start
-exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
