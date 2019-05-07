@@ -13,7 +13,7 @@ window#waybar {
 }
 
 window#waybar.hidded {
-    opacity: 0.2;
+    opacity: 0.333;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
