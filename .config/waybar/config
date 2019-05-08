@@ -11,7 +11,7 @@
     "format": "{ifname}",
     "format-wifi": "{essid} ({signalStrength}%) ",
     "format-ethernet": "{ifname} ",
-    "format-disconnected": "",
+    "format-disconnected": "",
     "tooltip-format": "{ifname}",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
     "tooltip-format-ethernet": "{ifname} ",
@@ -21,7 +21,7 @@
   "pulseaudio": {
     "format": "{icon}  {volume}%",
 	"format-bluetooth": "{icon}  {volume}%",
-	"format-muted": " mute",
+	"format-muted": " ",
     "format-icons": {
 	  "headphones": "",
 	  "default": [

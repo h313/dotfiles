@@ -7,9 +7,9 @@
 }
 
 window#waybar {
-    background: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    background: rgba(40, 40, 40, 0.75);
+    border-bottom: 3px solid rgba(177, 98, 134, 0.75);
+    color: #ebdbb2;
 }
 
 window#waybar.hidded {
@@ -20,22 +20,23 @@ window#waybar.hidded {
 #workspaces button {
     padding: 0 5px;
     background: transparent;
-    color: #ffffff;
+    color: #ebdbb2;
     border-bottom: 3px solid transparent;
 }
 
 #workspaces button.focused {
-    background: #64727D;
+    background: #a89984;
     border-bottom: 3px solid #ffffff;
+    color: #282828;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: #fb4934;
 }
 
 #mode {
-    background: #64727D;
-    border-bottom: 3px solid #ffffff;
+    background: #fb4934;
+    border-bottom: 3px solid #a89984;
 }
 
 #clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
@@ -44,17 +45,18 @@ window#waybar.hidded {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: #b8bb26;
+    color: #282828;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #a89984;
+    color: #282828;
 }
 
 #battery.charging {
-    color: #ffffff;
-    background-color: #26A65B;
+    color: #282828;
+    background-color: #8ec07c;
 }
 
 @keyframes blink {
@@ -65,8 +67,8 @@ window#waybar.hidded {
 }
 
 #battery.critical:not(.charging) {
-    background: #f53c3c;
-    color: #ffffff;
+    background: #fb4934;
+    color: #282828;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -88,21 +90,21 @@ window#waybar.hidded {
 }
 
 #network {
-    background: #2980b9;
+    background: #458588;
 }
 
 #network.disconnected {
-    background: #f53c3c;
+    background: #cc241d;
 }
 
 #pulseaudio {
-    background: #f1c40f;
-    color: #000000;
+    background: #d79921;
+    color: #282828;
 }
 
 #pulseaudio.muted {
-    background: #90b1b1;
-    color: #2a5c45;
+    background: #458588;
+    color: #ebdbb2;
 }
 
 #custom-media {
