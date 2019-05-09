@@ -222,8 +222,8 @@ bar {
 include @sysconfdir@/sway/config.d/*
 
 #     .class             border     back      text      indicator   child
-client.focused           #b8bb26a0	#b8bb26a0	#282828		#b8bb26a0	  #b8bb26a0
-client.focused_inactive  #98971aa0	#98971aa0	#282828		#98971aa0		#98971aa0
+client.focused           #458588a0	#458588a0	#ebdbb2		#458588a0	  #458588a0
+client.focused_inactive  #8ec07ca0	#8ec07ca0	#ebdbb2		#8ec07ca0	  #8ec07ca0
 client.unfocused         #3c3836a0	#3c383680	#ebdbb2		#3c383680		#3c383680
 client.urgent            #fb4934f0  #fb4934f0 #282828   #fb4934f0   #fb4934f0
 
