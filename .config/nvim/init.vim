@@ -1,3 +1,17 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'chrisbra/csv.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/goyo.vim'
+Plug 'kien/ctrlp.vim'
+
+call plug#end()
+
 set number
 
 set shiftwidth=2
