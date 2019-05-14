@@ -6,4 +6,4 @@ omf i thefuck pure
 sudo cp -r ~/.yadm/etc/* /etc/
 
 # Install stuff
-sudo pacman -S neovim i3-gaps alacritty khard khal ranger cmus neomutt feh
+sudo pacman -S neovim sway waybar alacritty khard khal ranger cmus neomutt feh

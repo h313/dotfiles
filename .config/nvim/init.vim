@@ -9,6 +9,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
 Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
