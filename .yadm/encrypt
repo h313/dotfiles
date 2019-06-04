@@ -1,9 +1,3 @@
 .ssh/*
 .aws/*
-.config/vdirsyncer/*
-.config/mutt/*
-.mbsyncrc
-.notmuch-config
-.password-store/*
-.config/msmtp
 .config/cmus/cmusfm.conf
