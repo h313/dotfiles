@@ -22,7 +22,7 @@ set $menu rofi -show drun -theme /usr/share/rofi/themes/Monokai
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /usr/share/backgrounds/f30/extras/i-see-stars.jpg fill
+output * bg /usr/share/backgrounds/Centimeter.png fill
 #
 # Example configuration:
 #
@@ -238,8 +238,8 @@ bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
 
 default_border pixel
 
-gaps inner 10
-gaps outer -4
+gaps inner 15
+gaps outer 15
 
 exec udiskie -T -a -n
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
