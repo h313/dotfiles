@@ -1,3 +1,4 @@
 .ssh/*
 .aws/*
 .config/cmus/cmusfm.conf
+.config/aerc/accounts.conf
