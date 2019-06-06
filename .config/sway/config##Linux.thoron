@@ -22,7 +22,7 @@ set $menu rofi -show drun -theme /usr/share/rofi/themes/Monokai
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /usr/share/backgrounds/Fates.jpg fill
+output * bg /usr/share/backgrounds/Sea.jpg fill
 #
 # Example configuration:
 #
@@ -80,7 +80,7 @@ input "1133:49291:Logitech_G502_HERO_Gaming_Mouse" {
 
     # start your launcher
     bindsym $mod+d exec $menu
-	
+
     bindsym $mod+Shift+v exec bwmenu -- -theme /usr/share/rofi/themes/Monokai.rasi
     bindsym $mod+Shift+w exec networkmanager_dmenu
 
@@ -192,16 +192,16 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    bindsym $left resize shrink width 15px
+    bindsym $down resize grow height 15px
+    bindsym $up resize shrink height 15px
+    bindsym $right resize grow width 15px
 
     # ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+    bindsym Left resize shrink width 15px
+    bindsym Down resize grow height 15px
+    bindsym Up resize shrink height 15px
+    bindsym Right resize grow width 15px
 
     # return to default mode
     bindsym Return mode "default"
