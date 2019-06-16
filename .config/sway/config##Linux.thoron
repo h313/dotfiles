@@ -22,7 +22,7 @@ set $menu rofi -show drun -theme /usr/share/rofi/themes/Monokai
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /usr/share/backgrounds/Sea.jpg fill
+output * bg /usr/share/backgrounds/a_silent_voice.jpg fill
 #
 # Example configuration:
 #
