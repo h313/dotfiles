@@ -238,6 +238,8 @@ bindsym $mod+p exec physlock -msd
 bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
 
 default_border pixel
+gaps inner 15
+gaps outer 15
 
 exec udiskie -T -a -n
 exec libinput-gestures-setup start
