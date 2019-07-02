@@ -237,9 +237,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym $mod+p exec physlock -msd
 bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
 
-default_border none
-gaps inner 10
-gaps outer -4
+default_border pixel
 
 exec udiskie -T -a -n
 exec libinput-gestures-setup start
