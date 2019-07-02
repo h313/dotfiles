@@ -239,7 +239,7 @@ bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
 default_border pixel
 
 gaps inner 15
-gaps outer 15
+gaps outer 7.5
 
 exec udiskie -T -a -n
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
