@@ -39,7 +39,7 @@ window#waybar.hidded {
     border-bottom: 3px solid #a89984;
 }
 
-#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-cmus, #tray, #mode, #idle_inhibitor, #custom-ibus {
     padding: 0 10px;
     margin: 0 5px;
 }
@@ -112,8 +112,12 @@ window#waybar.hidded {
     color: #2a5c45;
 }
 
-.custom-spotify {
-    background: #66cc99;
+#custom-cmus {
+    background: #504945;
+}
+
+#custom-ibus {
+    background: #689d6a;
 }
 
 .custom-vlc {

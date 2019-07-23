@@ -2,9 +2,25 @@
   "layer": "bottom",
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["sway/window"],
-  "modules-right": ["network", "pulseaudio", "clock", "tray"],
+  "modules-right": ["custom/cmus", "custom/ibus", "network", "pulseaudio", "clock", "tray"],
   "sway/window": {
     "max-length": 50
+  },
+  "custom/cmus": {
+    "format": "♪ {}",
+    "interval": 5,
+    "max-length": 50,
+    "exec": "cmus-remote -C \"format_print '%a - %t'\"",
+    "exec-if": "pgrep cmus",
+    "on-click": "cmus-remote -u",
+    "escape": true
+  },
+  "custom/ibus": {
+    "format": " {}",
+    "interval": 5,
+    "max-length": 50,
+    "exec": "ibus engine",
+    "on-click": "~/.config/sway/ibus-toggle"
   },
   "network": {
     "interface": "wlan0",
