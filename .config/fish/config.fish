@@ -15,6 +15,10 @@ if status is-login
     set -x QT_AUTO_SCREEN_SCALE_FACTOR 1
     set -gx SSH_AUTH_SOCK (gnome-keyring-daemon --start --components=pkcs11,secrets,ssh | grep "^SSH_AUTH_SOCK" | awk -F "=" '{print $2}')
     set -x XCURSOR_SIZE 16
+    set -x GTK_IM_MODULE ibus
+    set -x QT4_IM_MODULE xim
+    set -x QT_IM_MODULE xim
+    set -x XMODIFIERS @im=ibus
     exec sway
   end
 end

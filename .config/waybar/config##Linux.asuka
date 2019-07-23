@@ -7,7 +7,7 @@
     "max-length": 50
   },
   "network": {
-    "interface": "wlp5s0",
+    "interface": "wlan0",
     "format": "{ifname}",
     "format-wifi": "{essid} ({signalStrength}%) ",
     "format-ethernet": "{ifname} ",
