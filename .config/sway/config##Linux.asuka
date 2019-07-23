@@ -235,6 +235,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
 bindsym $mod+p exec physlock -msd
 bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
+bindsym Mod1+Shift+space exec ~/.config/sway/ibus-toggle
 
 default_border pixel
 
@@ -247,3 +248,4 @@ exec mako
 exec /usr/lib/geoclue-2.0/demos/agent
 exec redshift
 exec env GDK_BACKEND=x11 nm-applet
+exec ibus-daemon -drx

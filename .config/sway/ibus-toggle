@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+engine=$(ibus engine)
+if [ "${engine}" == "libpinyin" ]
+then
+    ibus engine xkb:us::eng
+else
+    ibus engine libpinyin
+fi
+
+setxkbmap -option caps:escape
