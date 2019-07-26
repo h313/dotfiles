@@ -249,3 +249,6 @@ exec /usr/lib/geoclue-2.0/demos/agent
 exec redshift
 exec env GDK_BACKEND=x11 nm-applet
 exec ibus-daemon -drx
+
+exec ibus engine xkb:us::eng
+exec xhost si:localuser:root
