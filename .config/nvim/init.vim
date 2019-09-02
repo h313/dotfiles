@@ -10,6 +10,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-latex/vim-latex'
 
 call plug#end()
 

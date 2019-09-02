@@ -65,7 +65,7 @@ exec swayidle -w \
 input "2:7:SynPS/2_Synaptics_TouchPad" {
   accel_profile flat
   tap enabled
-  natural_scroll enabled
+  natural_scroll disabled
 }
 
 
