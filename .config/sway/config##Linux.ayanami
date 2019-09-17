@@ -45,9 +45,11 @@ output eDP-1 scale 1.5
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
-  timeout 300 'physlock -msd' \
-  before-sleep 'physlock -msd' \
-  lock 'physlock -msd'
+  timeout 300 'swaylock-blur --blur-sigma 50' \
+  timeout 600 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+  before-sleep 'swaylock-blur --blur-sigma 50' \
+  lock 'swaylock-blur --blur-sigma 50'
 
 ### Input configuration
 #
@@ -65,7 +67,7 @@ exec swayidle -w \
 input "2:7:SynPS/2_Synaptics_TouchPad" {
   accel_profile flat
   tap enabled
-  natural_scroll disabled
+  natural_scroll enabled
 }
 
 
@@ -81,7 +83,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 
     # start your launcher
     bindsym $mod+d exec $menu
-	
+
     bindsym $mod+Shift+v exec bwmenu -- -theme /usr/share/rofi/themes/Monokai.rasi
     bindsym $mod+Shift+w exec networkmanager_dmenu
 
@@ -234,8 +236,11 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
-bindsym $mod+p exec physlock -msd
-bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
+bindsym $mod+p exec swaylock-blur --blur-sigma 50
+
+bindsym Print exec swayshot
+bindsym $mod+Print exec swayshot window
+bindsym Shift+Print exec swayshot region
 
 default_border pixel
 
