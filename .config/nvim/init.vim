@@ -6,7 +6,6 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'chrisbra/csv.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
