@@ -11,6 +11,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-latex/vim-latex'
+Plug 'rhysd/vim-clang-format'
 
 call plug#end()
 
