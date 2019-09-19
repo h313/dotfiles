@@ -2,7 +2,7 @@
   "layer": "bottom",
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["sway/window"],
-  "modules-right": ["custom/cmus", "custom/ibus", "network", "pulseaudio", "clock", "tray"],
+  "modules-right": ["custom/cmus", "custom/ibus", "ethernet", "wireless", "pulseaudio", "clock", "tray"],
   "sway/window": {
     "max-length": 50
   },
@@ -22,7 +22,19 @@
     "exec": "ibus engine",
     "on-click": "~/.config/sway/ibus-toggle"
   },
-  "network": {
+  "ethernet": {
+    "interface": "enp6s0",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ifname} ",
+    "format-disconnected": "",
+    "tooltip-format": "{ifname}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "{ifname}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "wireless": {
     "interface": "wlan0",
     "format": "{ifname}",
     "format-wifi": "{essid} ({signalStrength}%) ",
