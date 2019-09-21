@@ -17,4 +17,4 @@ set -x GTK_IM_MODULE ibus
 set -x QT4_IM_MODULE xim
 set -x QT_IM_MODULE xim
 set -x XMODIFIERS @im=ibus
-exec sway
+sway

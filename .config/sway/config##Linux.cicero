@@ -22,7 +22,7 @@ set $menu rofi -show drun -theme /usr/share/rofi/themes/Monokai
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /usr/share/backgrounds/Blur_Kxnt.png fill
+output * bg /usr/share/backgrounds/wanderer_bonus_5120x2880.png fill
 #
 # Example configuration:
 #
@@ -67,7 +67,7 @@ exec swayidle -w \
 input "2:7:SynPS/2_Synaptics_TouchPad" {
   accel_profile flat
   tap enabled
-  natural_scroll enabled
+  natural_scroll disabled
 }
 
 
