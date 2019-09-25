@@ -26,6 +26,8 @@ set smartindent
 filetype plugin on
 syntax on
 
+set clipboard+=unnamedplus
+
 colorscheme alduin
 set termguicolors
 

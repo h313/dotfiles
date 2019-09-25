@@ -6,6 +6,8 @@ set autoindent
 set smartindent
 set mouse=a
 
+set clipboard+=unnamedplus
+
 filetype plugin on
 syntax on
 colorscheme alduin
