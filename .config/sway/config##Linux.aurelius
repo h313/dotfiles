@@ -17,12 +17,12 @@ set $right semicolon
 set $term kitty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu rofi -show drun -theme /usr/share/rofi/themes/Monokai
+set $menu rofi -show drun -theme /usr/share/rofi/themes/gruvbox-dark
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /usr/share/backgrounds/pacific.png fill
+output * bg /usr/share/backgrounds/exodus_v01_5120x2880.png fill
 #
 # Example configuration:
 #
@@ -235,8 +235,12 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
-bindsym $mod+p exec physlock -msd
-bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
+bindsym $mod+p exec swaylock-blur --blur-sigma 50
+
+bindsym Print exec swayshot
+bindsym $mod+Print exec swayshot window
+bindsym Shift+Print exec swayshot region
+
 bindsym Mod1+Shift+space exec ~/.config/sway/ibus-toggle
 
 default_border pixel
