@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --ts-completer --system-libclang --system-boost' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clangd-completer --ts-completer --system-boost' }
 Plug 'chrisbra/csv.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -13,6 +13,7 @@ Plug 'vim-latex/vim-latex'
 Plug 'rhysd/vim-clang-format'
 Plug 'ryanoasis/vim-devicons'
 Plug 'jphustman/dbext.vim'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
