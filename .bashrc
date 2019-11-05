@@ -54,3 +54,5 @@ export QT_IM_MODULE=xim
 export XMODIFIERS="@im=ibus"
 
 [[ $XDG_VTNR -le 2 ]] && tbsm
+
+fish
