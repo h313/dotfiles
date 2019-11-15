@@ -10,7 +10,8 @@ type = discover
 
 [locale]
 timeformat = %H:%M
-dateformat = %m/%d/%Y
-longdateformat = %m/%d/%Y
-datetimeformat = %m/%d/%Y %H:%M
+dateformat = %d/%m/%Y
+longdateformat = %d/%m/%Y
+datetimeformat = %d/%m/%Y %H:%M
 longdatetimeformat = %m/%d/%Y %H:%M
+firstweekday = 6
