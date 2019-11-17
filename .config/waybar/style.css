@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Fira Mono, Droid Sans Mono, monospace;
+    font-family: SF Mono, Droid Sans Mono, monospace;
     font-size: 13px;
     min-height: 30px;
 }
@@ -16,7 +16,6 @@ window#waybar.hidded {
     opacity: 0.333;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button {
     padding: 0 5px;
     background: transparent;
