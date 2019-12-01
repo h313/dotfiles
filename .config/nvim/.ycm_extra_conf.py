@@ -10,7 +10,7 @@ def Settings( **kwargs ):
         '/usr/include/c++/8.2.1/',
         '-isystem',
         '/usr/include/boost'],
-    'interpreter_path': '/bin/python3.7'
+    'interpreter_path': '/bin/python3.8'
   }
 
 def PythonSysPath( **kwargs ):
