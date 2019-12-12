@@ -247,10 +247,11 @@ default_border pixel
 gaps inner 10
 gaps outer -4
 
-exec udiskie -T -a -n
+exec udiskie -T -a --appindicator
 exec libinput-gestures-setup start
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
 exec /usr/lib/geoclue-2.0/demos/agent
-exec redshift
-exec env GDK_BACKEND=x11 nm-applet
+exec redshift-gtk
+exec blueman-applet
+exec nm-applet --indicator
