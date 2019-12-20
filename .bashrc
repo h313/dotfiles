@@ -45,6 +45,7 @@ export CLUTTER_BACKEND=wayland
 export SDL_VIDEODRIVER=wayland
 export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
+export TERM=alacritty
 export QT_QPA_PLATFORMTHEME=qt5ct
 export SSH_AUTH_SOCK=$(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh | grep "^SSH_AUTH_SOCK" | awk -F "=" '{print $2}')
 export XCURSOR_SIZE=16
@@ -54,5 +55,3 @@ export QT_IM_MODULE=xim
 export XMODIFIERS="@im=ibus"
 
 [[ $XDG_VTNR -le 2 ]] && tbsm
-
-fish
