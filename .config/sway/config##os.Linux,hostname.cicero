@@ -14,7 +14,7 @@ set $down k
 set $up l
 set $right semicolon
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 set $menu /usr/bin/wofi -I -c ~/.config/wofi/wofi.conf

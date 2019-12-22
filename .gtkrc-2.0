@@ -1,6 +1,6 @@
-gtk-theme-name="Nordic-Polar"
-gtk-icon-theme-name="Papirus-nordic-folders"
-gtk-font-name="Lato 11"
+gtk-theme-name="Arc-Darker"
+gtk-icon-theme-name="Arc"
+gtk-font-name="Roboto 11"
 gtk-cursor-theme-name="Paper"
 gtk-cursor-theme-size=16
 gtk-toolbar-style=GTK_TOOLBAR_BOTH_HORIZ
