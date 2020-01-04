@@ -37,3 +37,5 @@ fi
 
 
 [[ $XDG_VTNR -le 2 ]] && tbsm
+
+export QSYS_ROOTDIR="/home/harry/.cache/yay/intel_fpga_lite/src/install/quartus/sopc_builder/bin"
