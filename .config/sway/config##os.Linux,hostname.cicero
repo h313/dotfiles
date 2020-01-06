@@ -246,7 +246,7 @@ default_border pixel
 gaps inner 10
 gaps outer -4
 
-exec udiskie -T -a --appindicator
+exec udiskie -t -A --appindicator
 exec libinput-gestures-setup start
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
