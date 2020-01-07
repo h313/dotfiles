@@ -7,10 +7,10 @@ def Settings( **kwargs ):
         '-Wextra',
         '-Werror',
         '-isystem',
-        '/usr/include/c++/8.2.1/',
+        '/usr/include/c++/9/',
         '-isystem',
         '/usr/include/boost'],
-    'interpreter_path': '/bin/python3.8'
+    'interpreter_path': '/bin/python3'
   }
 
 def PythonSysPath( **kwargs ):

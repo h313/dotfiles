@@ -30,9 +30,11 @@ export GTK_IM_MODULE=xim
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=xim
 
+export PATH=$PATH:/opt/intel/bin:/var/lib/flatpak/exports/bin
+
+export MOZ_ENABLE_WAYLAND=1
+export GDK_DPI_SCALE=1.5
+export QT_QPA_PLATFORMTHEME=qt5ct
+
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
-
-[[ $XDG_VTNR -le 2 ]] && tbsm
-
-export QSYS_ROOTDIR="/home/harry/.cache/yay/intel_fpga_lite/src/install/quartus/sopc_builder/bin"

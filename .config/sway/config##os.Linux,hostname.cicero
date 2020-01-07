@@ -22,14 +22,14 @@ set $menu /usr/bin/wofi -I -c ~/.config/wofi/wofi.conf
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /usr/share/backgrounds/Emerald Bay.jpg fill
+output * bg /usr/share/backgrounds/nebula.jpg fill
 #
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output eDP-1 scale 1.5
+output eDP-1 scale 1.0
 
 ### Idle configuration
 #
@@ -82,9 +82,6 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 
     # start your launcher
     bindsym $mod+d exec $menu
-
-    bindsym $mod+Shift+v exec bwmenu -- -theme /usr/share/rofi/themes/Monokai.rasi
-    bindsym $mod+Shift+w exec networkmanager_dmenu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -248,8 +245,8 @@ gaps outer -4
 
 exec udiskie -t -A --appindicator
 exec libinput-gestures-setup start
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec mako
+exec /usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1
+exec /usr/local/bin/mako
 exec /usr/lib/geoclue-2.0/demos/agent
 exec redshift-gtk
 exec blueman-applet

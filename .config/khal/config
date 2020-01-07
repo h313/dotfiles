@@ -4,13 +4,14 @@
 path = ~/.calendars/*
 type = discover
 
-[[contacts]]
-path = ~/.contacts/*
-type = discover
-
 [locale]
+local_timezone = America/New_York
+default_timezone = America/Los_Angeles
+
 timeformat = %H:%M
 dateformat = %m/%d/%Y
 longdateformat = %m/%d/%Y
 datetimeformat = %m/%d/%Y %H:%M
 longdatetimeformat = %m/%d/%Y %H:%M
+
+firstweekday = 6

@@ -4,7 +4,7 @@
   "modules-center": ["sway/window"],
   "modules-right": ["network", "pulseaudio", "battery", "clock", "tray"],
   "sway/window": {
-    "max-length": 50
+    "max-length": 10
   },
   "network": {
     "interface": "wlan0",
