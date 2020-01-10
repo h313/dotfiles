@@ -1,3 +1,5 @@
+package foreign-env
+package rustup
 package thefuck
 theme clearance
 theme default

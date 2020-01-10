@@ -34,7 +34,15 @@ export PATH=$PATH:/opt/intel/bin:/var/lib/flatpak/exports/bin
 
 export MOZ_ENABLE_WAYLAND=1
 export GDK_DPI_SCALE=1.5
+export QT_SCALE_FACTOR=1.5
 export QT_QPA_PLATFORMTHEME=qt5ct
+export XDG_CURRENT_DESKTOP=sway
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
+
+source $HOME/.cargo/env
+
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  XKB_DEFAULT_LAYOUT=us exec sway
+fi

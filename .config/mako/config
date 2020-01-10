@@ -2,5 +2,5 @@ default-timeout=5000
 background-color=#282828B3
 text-color=#EBDBB2FF
 border-color=#EBDBB2B3
-font=Inconsolata 24
-icon-path=/usr/share/icons/Papirus-Dark
+font=Inconsolata 18
+icon-path=/usr/share/icons/Paper

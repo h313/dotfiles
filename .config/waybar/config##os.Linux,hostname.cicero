@@ -38,5 +38,9 @@
   },
   "clock": {
     "format-alt": "{:%a, %b %d  %H:%M}"
+  },
+  "tray": {
+    "icon-size": 24,
+    "spacing": 5
   }
 }
