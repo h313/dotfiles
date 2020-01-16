@@ -1,0 +1,14 @@
+window {
+  background-color: #d8dee9;
+  font-family: "Inconsolata";
+  font-size: 16px;
+}
+
+#input {
+  background-color: #eceff4;
+  color: #b48ead;
+}
+
+#text {
+  color: #2e3440;
+}
