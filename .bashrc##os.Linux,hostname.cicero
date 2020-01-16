@@ -26,12 +26,6 @@ alias lr='ls -R'
 alias l='ls'
 alias mkdir='mkdir -p'
 
-export GTK_IM_MODULE=xim
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=xim
-
-export PATH=$PATH:/opt/intel/bin:/var/lib/flatpak/exports/bin
-
 export MOZ_ENABLE_WAYLAND=1
 export GDK_DPI_SCALE=1.5
 export QT_SCALE_FACTOR=1.5
