@@ -245,7 +245,7 @@ gaps outer -4
 
 exec udiskie -t -A --appindicator
 exec libinput-gestures-setup start
-exec /usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1
+exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 exec /usr/local/bin/mako
 exec /usr/lib/geoclue-2.0/demos/agent
 exec redshift-gtk
