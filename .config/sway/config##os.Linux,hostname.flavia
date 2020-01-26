@@ -256,7 +256,7 @@ exec blueman-applet
 exec nm-applet --indicator
 exec xdg-desktop-portal-wlr
 exec env GDK_BACKEND=x11 nm-applet
-exec ibus-daemon -drx
+exec ibus-daemon -drx --panel /usr/lib/ibus/ibus-ui-gtk3
 
 exec ibus engine xkb:us::eng
 exec xhost si:localuser:root
