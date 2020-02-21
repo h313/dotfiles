@@ -47,7 +47,6 @@ seat seat0 xcursor_theme Paper 16
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
-  timeout 300 'swaylock-blur --blur-sigma 50' \
   timeout 600 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
   lock 'swaylock-blur --blur-sigma 50'
