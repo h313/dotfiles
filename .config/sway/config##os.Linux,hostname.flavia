@@ -242,9 +242,11 @@ bindsym --release Print exec grim -g "$(slurp)" - | wl-copy
 bindsym Mod1+Shift+space exec ~/.config/sway/ibus-toggle
 
 default_border pixel
+smart_borders on
 
 gaps inner 5
 gaps outer 5
+smart_gaps on
 
 exec udiskie -t -A --appindicator
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

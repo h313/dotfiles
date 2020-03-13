@@ -238,9 +238,11 @@ bindsym $mod+p exec swaylock-blur --blur-sigma 50
 bindsym --release Print exec grim -g "$(slurp)" - | wl-copy
 
 default_border pixel
+smart_borders on
 
 gaps inner 10
 gaps outer -4
+smart_gaps on
 
 exec udiskie -t -A --appindicator
 exec libinput-gestures-setup start
