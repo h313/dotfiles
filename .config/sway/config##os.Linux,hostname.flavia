@@ -49,6 +49,7 @@ seat seat0 xcursor_theme Paper 16
 exec swayidle -w \
   timeout 600 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
+  before-sleep 'swaylock-blur --blur-sigma 50' \
   lock 'swaylock-blur --blur-sigma 50'
 
 ### Input configuration
