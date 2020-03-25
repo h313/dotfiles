@@ -1,8 +1,8 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Inconsolata, Droid Sans Mono, monospace;
-    font-size: 24px;
+    font-family: SF Mono, Droid Sans Mono, monospace;
+    font-size: 20px;
     min-height: 45px;
 }
 
