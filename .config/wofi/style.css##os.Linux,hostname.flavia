@@ -1,7 +1,7 @@
 window {
   background-color: #d8dee9;
   font-family: "SF Mono";
-  font-size: 12px;
+  font-size: 15px;
 }
 
 #input {
