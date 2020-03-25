@@ -22,7 +22,7 @@ set $menu /usr/bin/wofi -I -c ~/.config/wofi/wofi.conf
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /usr/share/backgrounds/exodus_v01_5120x2880.png fill
+output * bg /usr/share/backgrounds/mountain.jpg fill
 #
 # Example configuration:
 #
