@@ -1,14 +1,19 @@
 window {
-  background-color: #d8dee9;
+  background-color: #272822;
   font-family: "SF Mono";
   font-size: 15px;
 }
 
-#input {
-  background-color: #eceff4;
-  color: #b48ead;
+#outer-box {
+  border: 2px solid #66d9ef;
 }
 
-#text {
-  color: #2e3440;
+#input {
+  color: #a6e22e;
+  background-color: #272822;
+  font-weight: bold;
+}
+
+#inner-box {
+  color: #f8f8f2;
 }

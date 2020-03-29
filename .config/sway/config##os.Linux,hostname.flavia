@@ -17,7 +17,7 @@ set $right semicolon
 set $term kitty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu /usr/bin/wofi -I -c ~/.config/wofi/wofi.conf
+set $menu /usr/bin/wofi -I
 
 ### Output configuration
 #
@@ -223,11 +223,30 @@ bar {
 
 include @sysconfdir@/sway/config.d/*
 
-#     .class             border     back      text      indicator   child
-client.focused           #458588a0	#458588a0	#ebdbb2		#458588a0	  #458588a0
-client.focused_inactive  #8ec07ca0	#8ec07ca0	#ebdbb2		#8ec07ca0	  #8ec07ca0
-client.unfocused         #3c3836a0	#3c383680	#ebdbb2		#3c383680		#3c383680
-client.urgent            #fb4934f0  #fb4934f0 #282828   #fb4934f0   #fb4934f0
+set $base00 #272822
+set $base01 #383830
+set $base02 #49483e
+set $base03 #75715e
+set $base04 #a59f85
+set $base05 #f8f8f2
+set $base06 #f5f4f1
+set $base07 #f9f8f5
+set $base08 #f92672
+set $base09 #fd971f
+set $base0A #f4bf75
+set $base0B #a6e22e
+set $base0C #a1efe4
+set $base0D #66d9ef
+set $base0E #ae81ff
+set $base0F #cc6633
+
+# Property Name         Border  BG      Text    Indicator Child Border
+client.focused          $base05 $base0D $base00 $base0D $base0C
+client.focused_inactive $base01 $base01 $base05 $base03 $base01
+client.unfocused        $base01 $base00 $base05 $base01 $base01
+client.urgent           $base08 $base08 $base00 $base08 $base08
+client.placeholder      $base00 $base00 $base05 $base00 $base00
+client.background       $base07
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%

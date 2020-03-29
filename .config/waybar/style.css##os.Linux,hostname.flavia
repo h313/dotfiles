@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     font-family: SF Mono, Droid Sans Mono, monospace;
-    font-size: 12px;
+    font-size: 14px;
     min-height: 30px;
 }
 
