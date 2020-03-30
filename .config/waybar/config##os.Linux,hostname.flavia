@@ -18,6 +18,10 @@
   "sway/window": {
     "max-length": 50
   },
+  "sway/mode": {
+    "format": " {}",
+    "max-length": 50
+  },
   "custom/ibus": {
     "format": " {}",
     "interval": 1,

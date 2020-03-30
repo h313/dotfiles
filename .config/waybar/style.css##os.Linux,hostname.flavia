@@ -8,22 +8,28 @@
 
 window#waybar {
   background: rgba(40, 40, 40, 0.75);
-  color: #ebdbb2;
+  color: #272822;
   background: transparent;
 }
 
 #workspaces button {
   padding: 0 5px;
-  color: #ebdbb2;
+  color: #f8f8f2;
 }
 
 #workspaces button.focused {
-  background: #75715e;
+  background: #f8f8f2;
   color: #272822;
 }
 
 #workspaces button.urgent {
   background-color: #f92672;
+  color: #272822;
+}
+
+#mode {
+  background-color: #f92672;
+  color: #f8f8f2;
 }
 
 #window {
@@ -31,7 +37,7 @@ window#waybar {
   font-weight: bold;
 }
 
-#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-cmus, #tray, #mode, #idle_inhibitor, #custom-ibus {
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #tray, #mode, #custom-ibus {
   padding: 0 10px;
 }
 
@@ -41,30 +47,33 @@ window#waybar {
 }
 
 #cpu {
-  background: #2ecc71;
-  color: #000000;
+  background: #2AA198;
+  color: #f8f8f2;
 }
 
 #memory {
-  background: #9b59b6;
+  background: #2AA198;
+  color: #f8f8f2;
 }
 
 #network {
-  background: #458588;
+  background: #a6e22e;
+  color: #272822;
 }
 
 #network.disconnected {
-  background: #cc241d;
+  background: #f92672;
+  color: #f8f8f2;
 }
 
 #pulseaudio {
-  background: #d79921;
-  color: #282828;
+  background: #ae81ff;
+  color: #272822;
 }
 
 #pulseaudio.muted {
-  background: #b16286;
-  color: #ebdbb2;
+  background: #f92672;
+  color: #f8f8f2;
 }
 
 #custom-ibus {
@@ -72,5 +81,5 @@ window#waybar {
 }
 
 #tray {
-  background-color: #2980b9;
+  background-color: #75715e;
 }
