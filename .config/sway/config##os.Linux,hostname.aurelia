@@ -22,7 +22,7 @@ set $menu /usr/bin/wofi -I
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /usr/share/backgrounds/nebula.jpg fill
+output * bg /usr/share/backgrounds/sunlight.jpg fill
 #
 # Example configuration:
 #
@@ -47,9 +47,10 @@ seat seat0 xcursor_theme Paper 32
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
+  timeout 300 'loginctl lock-session $XDG_SESSION_ID' \
   timeout 600 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
-  before-sleep 'swaylock-blur --blur-sigma 50' \
+  before-sleep 'loginctl lock-session $XDG_SESSION_ID' \
   lock 'swaylock-blur --blur-sigma 50'
 
 ### Input configuration
