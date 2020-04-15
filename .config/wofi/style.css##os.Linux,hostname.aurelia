@@ -1,6 +1,6 @@
 window {
   background-color: #272822;
-  font-family: "SF Mono";
+  font-family: "Inconsolata";
   font-size: 24px;
 }
 

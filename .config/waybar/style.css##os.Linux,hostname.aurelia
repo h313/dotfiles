@@ -1,15 +1,14 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: SF Mono, Droid Sans Mono, monospace;
-    font-size: 20px;
+    font-family: Inconsolata, monospace;
+    font-size: 24px;
     min-height: 45px;
 }
 
 window#waybar {
     background: rgba(40, 40, 40, 0.75);
-    border-bottom: 3px solid rgba(177, 98, 134, 0.75);
-    color: #ebdbb2;
+    color: #f8f8f2;
 }
 
 window#waybar.hidded {
@@ -19,18 +18,16 @@ window#waybar.hidded {
 #workspaces button {
     padding: 0 5px;
     background: transparent;
-    color: #ebdbb2;
-    border-bottom: 3px solid transparent;
+    color: #f8f8f2;
 }
 
 #workspaces button.focused {
     background: #a89984;
-    border-bottom: 3px solid #ffffff;
-    color: #282828;
+    color: #272822;
 }
 
 #workspaces button.urgent {
-    background-color: #fb4934;
+    background-color: #f92672;
 }
 
 #mode {
@@ -44,30 +41,30 @@ window#waybar.hidded {
 }
 
 #clock {
-    background-color: #b8bb26;
-    color: #282828;
+    background-color: #f8f8f2;
+    color: #272822;
 }
 
 #battery {
-    background-color: #a89984;
-    color: #282828;
+    background-color: #f4bf75;
+    color: #272822;
 }
 
 #battery.charging {
-    color: #282828;
-    background-color: #8ec07c;
+    color: #272822;
+    background-color: #a6e22e;
 }
 
 @keyframes blink {
     to {
         background-color: #ffffff;
-        color: #000000;
+        color: #272822;
     }
 }
 
 #battery.critical:not(.charging) {
-    background: #fb4934;
-    color: #282828;
+    background: #f92672;
+    color: #272822;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -76,70 +73,25 @@ window#waybar.hidded {
 }
 
 #cpu {
-    background: #2ecc71;
-    color: #000000;
+    background: #66d9ef;
+    color: #272822;
 }
 
 #memory {
-    background: #9b59b6;
-}
-
-#backlight {
-    background: #90b1b1;
-}
-
-#network {
-    background: #458588;
-}
-
-#network.disconnected {
-    background: #cc241d;
+    background: #ae81ff;
+    color: #272822;
 }
 
 #pulseaudio {
     background: #d79921;
-    color: #282828;
+    color: #272822;
 }
 
 #pulseaudio.muted {
-    background: #b16286;
-    color: #ebdbb2;
-}
-
-#custom-media {
-    background: #66cc99;
-    color: #2a5c45;
-}
-
-#custom-cmus {
-    background: #504945;
-}
-
-#custom-ibus {
-    background: #689d6a;
-}
-
-.custom-vlc {
-    background: #ffa000;
-}
-
-#temperature {
-    background: #f0932b;
-}
-
-#temperature.critical {
-    background: #eb4d4b;
+    background: #f8f8f2;
+    color: #272822;
 }
 
 #tray {
-    background-color: #2980b9;
-}
-
-#idle_inhibitor {
-    background-color: #2d3436;
-}
-
-#idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    background-color: #75715e;
 }
