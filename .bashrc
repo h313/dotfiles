@@ -25,15 +25,3 @@ alias lh='ls -lh'
 alias lr='ls -R'
 alias l='ls'
 alias mkdir='mkdir -p'
-
-export MOZ_ENABLE_WAYLAND=1
-export _JAVA_AWT_WM_NONREPARENTING=1
-
-export QT_SCALE_FACTOR=1.5
-
-export QT_QPA_PLATFORMTHEME=qt5ct
-export XDG_CURRENT_DESKTOP=sway
-
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
-
