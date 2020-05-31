@@ -22,7 +22,7 @@ set $menu /usr/bin/wofi -I
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sunlight.jpg fill
+output * bg /usr/share/backgrounds/sakura.jpg fill
 #
 # Example configuration:
 #
@@ -259,11 +259,11 @@ bindsym $mod+p exec swaylock-blur --blur-sigma 50
 bindsym --release Print exec grim -g "$(slurp)" - | wl-copy
 
 default_border pixel
-smart_borders on
+smart_borders off
 
 gaps inner 10
 gaps outer -4
-smart_gaps on
+smart_gaps off
 
 exec udiskie -t -A --appindicator
 exec libinput-gestures-setup start

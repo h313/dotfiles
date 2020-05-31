@@ -1,7 +1,7 @@
 window {
   background-color: #272822;
   font-family: "Inconsolata";
-  font-size: 24px;
+  font-size: 28px;
 }
 
 #outer-box {
@@ -9,11 +9,22 @@ window {
 }
 
 #input {
-  color: #a6e22e;
+  color: #f4bf75;
   background-color: #272822;
   font-weight: bold;
+  border: 0;
+  padding: 12;
 }
 
 #inner-box {
   color: #f8f8f2;
+}
+
+#entry {
+  padding: 12;
+}
+
+#entry:selected {
+  color: #f8f8f2;
+  background-color: #75715e;
 }
