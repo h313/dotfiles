@@ -44,6 +44,8 @@ export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 ibus-daemon -drx
 
+export NVIM_GTK_NO_HEADERBAR=1
+
 xset 180 120
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)

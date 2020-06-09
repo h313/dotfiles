@@ -42,7 +42,6 @@ let g:ycm_global_ycm_extra_conf = '~/.config/nvim/.ycm_extra_conf.py'
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
-let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='alduin'
 

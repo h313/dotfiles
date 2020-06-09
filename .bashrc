@@ -25,3 +25,5 @@ alias lh='ls -lh'
 alias lr='ls -R'
 alias l='ls'
 alias mkdir='mkdir -p'
+
+source /usr/share/doc/pkgfile/command-not-found.bash

@@ -3,7 +3,7 @@ height = 40
 background = #272822
 foreground = #f8f8f2
 
-font-0 = Inconsolata:size=18;3
+font-0 = IBM Plex Sans:size=16;3
 font-1 = Symbols Nerd Font:size=16;3
 
 modules-left = i3
@@ -22,6 +22,12 @@ enable-scroll = true
 label-focused-foreground = #a6e22e
 label-urgent-foreground = f92672
 
+label-focused-padding = 1
+label-unfocused-padding = 1
+label-visible-padding = 1
+label-urgent-padding = 1
+label-mode-padding = 1
+
 [module/date]
 type = internal/date
 
@@ -37,6 +43,8 @@ interval = 5
 format-volume = <ramp-volume> <label-volume>
 
 label-muted = 婢
+label-volume = %percentage%
+
 ramp-volume-0 = 奄
 ramp-volume-1 = 奔
 ramp-volume-2 = 墳
@@ -49,17 +57,26 @@ interval = 1
 
 format-discharging = <ramp-capacity> <label-discharging>
 format-charging = <animation-charging> <label-charging>
+
 label-charging = %percentage%
 label-discharging = %percentage%
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+
