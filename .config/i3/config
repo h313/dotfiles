@@ -208,6 +208,7 @@ exec /usr/lib/geoclue-2.0/demos/agent
 exec libinput-gestures-setup start
 exec /usr/bin/dunst
 exec /usr/bin/picom
+exec /usr/bin/unclutter
 
 exec --no-startup-id nm-applet
 exec /usr/bin/parcellite

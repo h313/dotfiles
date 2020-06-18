@@ -5,3 +5,4 @@ if test -n "$DESKTOP_SESSION"
     set (gnome-keyring-daemon --start | string split "=")
 end
 
+set --export VIRTUAL_ENV_DISABLE_PROMPT 1
