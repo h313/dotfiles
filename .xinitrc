@@ -44,9 +44,8 @@ export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 ibus-daemon -drx
 
-xset 180 120
-
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
+xautolock -time 10 -locker "systemctl suspend" -detectsleep &
 i3
