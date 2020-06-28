@@ -63,3 +63,4 @@ entry {
   padding: 12;
   text-color: @yellow;
 }
+
