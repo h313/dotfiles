@@ -34,8 +34,6 @@ fi
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-export QT_SCALE_FACTOR=1.5
-
 export QT_QPA_PLATFORMTHEME=qt5ct
 export XDG_CURRENT_DESKTOP=sway
 
@@ -44,9 +42,9 @@ export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 ibus-daemon -drx
 
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+eval $(/usr/bin/gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 
-exec xautolock -time 10 -locker "systemctl suspend" -detectsleep
+exec xautolock -time 10 -locker "loginctl lock-session" -detectsleep &
 i3
 
