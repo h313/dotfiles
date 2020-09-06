@@ -33,6 +33,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 export _JAVA_AWT_WM_NONREPARENTING=1
+export MOZ_X11_EGL=1
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 export XDG_CURRENT_DESKTOP=sway
@@ -42,8 +43,7 @@ export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 ibus-daemon -drx
 
-eval $(/usr/bin/gnome-keyring-daemon --start)
-export SSH_AUTH_SOCK
+export MSF_DATABASE_CONFIG=/home/harry/.msf4/database.yml
 
 exec xautolock -time 10 -locker "loginctl lock-session" -detectsleep &
 i3
