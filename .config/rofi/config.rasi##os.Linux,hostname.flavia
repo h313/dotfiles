@@ -63,3 +63,7 @@ entry {
   padding: 12;
   text-color: @yellow;
 }
+
+element-icon {
+  size: 2ch;
+}
