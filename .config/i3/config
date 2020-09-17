@@ -215,4 +215,5 @@ exec /usr/bin/parcellite
 exec udiskie -t -a --appindicator
 exec redshift-gtk
 exec blueman-applet
+exec caffeine-indicator
 
