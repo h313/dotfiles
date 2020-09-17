@@ -54,7 +54,7 @@ inputbar {
 
 prompt {
   enabled: true;
-  font: "IBM Plex Mono 12";
+  font: "Inconsolata 16";
   padding: 12 0 0 12;
   text-color: @yellow;
 }
