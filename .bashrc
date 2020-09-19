@@ -27,6 +27,9 @@ alias l='ls'
 alias mkdir='mkdir -p'
 
 source /usr/share/doc/pkgfile/command-not-found.bash
+eval $(thefuck --alias)
+source /etc/modules/init/bash
+source /etc/modules/init/bash_completion
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
