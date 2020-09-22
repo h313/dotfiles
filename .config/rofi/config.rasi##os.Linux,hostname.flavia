@@ -5,6 +5,7 @@ configuration {
   display-run: " ";
   display-drun: " ";
   display-window: " ";
+  display-combi: "";
   modi: "window,run,drun";
 }
 
