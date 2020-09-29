@@ -1,2 +1,4 @@
+package foreign-env
+package nvm
 package python
 theme clearance

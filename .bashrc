@@ -34,5 +34,9 @@ source /etc/modules/init/bash_completion
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
-
 eval "$(thefuck --alias)"
+
+source /usr/share/nvm/init-nvm.sh
+source /etc/modules/init/bash
+source /etc/modules/init/bash_completion
+source /usr/share/doc/pkgfile/command-not-found.bash
