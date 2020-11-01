@@ -3,8 +3,8 @@ configuration {
   font: "Inconsolata 20";
   drun-display-format: "{icon} {name}";
   display-run: " ";
-  display-drun: "ﬓ";
-  display-window: "";
+  display-drun: "";
+  display-window: "缾";
   display-combi: "";
   modi: "window,run,drun";
 }
