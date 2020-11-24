@@ -13,6 +13,7 @@ Plug 'vim-latex/vim-latex'
 Plug 'rhysd/vim-clang-format'
 Plug 'jphustman/dbext.vim'
 Plug 'tpope/vim-surround'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -44,6 +45,7 @@ let g:tex_flavor = "latex"
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='alduin'
+let g:airline_powerline_fonts = 1
 
 let g:ycm_register_as_syntastic_checker = 1
 let g:Show_diagnostics_ui = 1
