@@ -42,3 +42,6 @@ set recolor-darkcolor           "#f5f4f1"
 
 set recolor                     "false"
 set recolor-keephue             "false"
+
+set guioptions                  "schv"
+set statusbar-home-tilde        "true"
