@@ -7,17 +7,27 @@ font-0 = IBM Plex Mono:size=16;3
 font-1 = Symbols Nerd Font:size=16;3
 
 modules-left = i3
-modules-center = date
-modules-right = pulseaudio battery
-module-margin = 2
+modules-center = title
+modules-right = pulseaudio battery date
+module-margin = 1
 
 tray-position = right
 tray-maxsize = 28
+
+monitor = ${env:MONITOR:}
+
+wm-restack = i3
+override-redirect = false
+
+[module/title]
+type = internal/xwindow
+label-maxlen = 50
 
 [module/i3]
 type = internal/i3
 enable-click = true
 enable-scroll = true
+pin-workspaces = true
 
 label-focused-foreground = #a6e22e
 label-urgent-foreground = f92672
@@ -31,8 +41,11 @@ label-mode-padding = 1
 [module/date]
 type = internal/date
 
-date = %Y-%m-%d%
-time = %H:%M:%S
+date = ""
+time =  %H:%M
+
+date-alt =  %Y-%m-%d%
+time-alt =  %H:%M:%S
 
 label = %date% %time%
 
@@ -56,6 +69,7 @@ type = internal/battery
 interval = 1
 
 format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
 format-charging = <animation-charging> <label-charging>
 
 label-charging = %percentage%

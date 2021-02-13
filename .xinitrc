@@ -46,7 +46,6 @@ ibus-daemon -drx
 export MSF_DATABASE_CONFIG=/home/harry/.msf4/database.yml
 
 export TERMINAL=/usr/bin/kitty
-export PAGER=/usr/bin/w3m
 export EDITOR=/usr/bin/nvim
 
 exec xautolock -time 10 -locker "loginctl lock-session" -detectsleep &
