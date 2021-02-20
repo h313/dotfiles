@@ -19,7 +19,7 @@ font pango:monospace 10
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
-exec feh --bg-fill /usr/share/backgrounds/bg.jpg
+exec feh --bg-fill /usr/share/backgrounds/bg.png
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
