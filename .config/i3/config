@@ -203,6 +203,7 @@ default_border pixel
 gaps inner 10
 gaps outer -4
 
+exec xiccd
 exec /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 exec /usr/lib/geoclue-2.0/demos/agent
 exec libinput-gestures-setup start
