@@ -4,6 +4,3 @@ omf i thefuck pure
 
 # Copy over all config files in /etc
 sudo cp -r ~/.yadm/etc/* /etc/
-
-# Install stuff
-sudo pacman -S neovim sway waybar alacritty khard khal ranger cmus neomutt feh

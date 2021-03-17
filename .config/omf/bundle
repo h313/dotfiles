@@ -2,4 +2,4 @@ package bass
 package foreign-env
 package nvm
 package python
-theme clearance
+theme pure

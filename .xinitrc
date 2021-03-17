@@ -36,7 +36,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export MOZ_X11_EGL=1
 
 export QT_QPA_PLATFORMTHEME=qt5ct
-export XDG_CURRENT_DESKTOP=sway
+export XDG_CURRENT_DESKTOP=gnome
 
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
