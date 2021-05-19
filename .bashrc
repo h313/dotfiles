@@ -41,3 +41,7 @@ source /etc/modules/init/bash
 source /etc/modules/init/bash_completion
 source /usr/share/doc/pkgfile/command-not-found.bash
 
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec startx
+fi
+

@@ -213,7 +213,6 @@ exec /usr/bin/unclutter
 
 exec --no-startup-id nm-applet
 exec /usr/bin/parcellite
-exec udiskie -a -s --appindicator
 exec redshift-gtk
 exec blueman-applet
 exec caffeine

@@ -15,3 +15,12 @@
 	rebase = false
 [credential]
 	helper = /usr/lib/git-core/git-credential-libsecret
+[diff]
+	tool = bc
+[difftool]
+	prompt = false
+	bc = trustExitCode
+[merge]
+	tool = bc
+[mergetool]
+	bc = trustExitCode
