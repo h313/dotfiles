@@ -36,7 +36,6 @@ export SSH_AUTH_SOCK
 
 eval "$(thefuck --alias)"
 
-source /usr/share/nvm/init-nvm.sh
 source /etc/modules/init/bash
 source /etc/modules/init/bash_completion
 source /usr/share/doc/pkgfile/command-not-found.bash
