@@ -48,6 +48,13 @@ let g:airline_powerline_fonts = 1
 
 let g:Show_diagnostics_ui = 1
 
+if has("nvim-0.5.0") || has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
+
 if has('nvim')
   inoremap <silent><expr> <c-space> coc#refresh()
 else
