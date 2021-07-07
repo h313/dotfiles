@@ -96,6 +96,20 @@
           }
         }
       }
+    },
+    "rust": {
+      "command": "rust-analyzer",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
+    },
+    "latex": {
+      "command": "texlab",
+      "filetypes": ["tex", "bib", "plaintex", "context"]
+    },
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
     }
   }
 }
