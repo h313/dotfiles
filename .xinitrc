@@ -48,6 +48,6 @@ export MSF_DATABASE_CONFIG=/home/harry/.msf4/database.yml
 export TERMINAL=/usr/bin/kitty
 export EDITOR=/usr/bin/nvim
 
-exec xautolock -time 10 -locker "loginctl lock-session" -detectsleep &
+exec xautolock -time 5 -locker "loginctl lock-session" -detectsleep &
 i3
 
