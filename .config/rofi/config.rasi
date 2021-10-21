@@ -1,0 +1,82 @@
+configuration {
+  show-icons: true;
+  icon-theme: "Paper";
+  font: "Inconsolata 20";
+  drun-display-format: "{icon} {name}";
+  display-run: " ";
+  display-drun: "";
+  display-window: "缾";
+  display-combi: "";
+  modi: "window,run,drun";
+}
+
+@theme ""
+
+* {
+  background: #272822;
+  bg-alt: #75715e;
+  fg: #f8f8f2;
+
+  blue-light: #66d9ef;
+  yellow: #f4bf75;
+
+  background-color: @background;
+  color: @fg;
+  border: 0;
+  lines: 12;
+  padding: 0;
+  margin: 0;
+  spacing: 0;
+}
+
+window {
+  width: 30%;
+  transparency: "real";
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+listview {
+  columns: 1;
+}
+
+element {
+  padding: 12;
+  background-color: @background;
+  orientation: horizontal;
+  text-color: @fg;
+  children: [element-icon, element-text];
+}
+
+element.selected {
+  background-color: @bg-alt;
+  text-color: @blue-light;
+}
+
+inputbar {
+  background-color: @background;
+  children: [prompt, entry];
+}
+
+prompt {
+  enabled: true;
+  font: "Inconsolata 16";
+  padding: 12 0 0 12;
+  text-color: @yellow;
+}
+
+entry {
+  padding: 12;
+  text-color: @yellow;
+}
+
+element-icon {
+  size: 2ch;
+  background-color: inherit;
+}
+
+element-text {
+  background-color: inherit;
+}

@@ -1,0 +1,26 @@
+[user]
+	email = harry@h313.info
+	name = Haoda Wang
+[pager]
+	diff = diff-so-fancy | less --tabs=1,5 -RFX
+	show = diff-so-fancy | less --tabs=1,5 -RFX
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[commit]
+	gpgsign = true
+[pull]
+	rebase = false
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+[diff]
+	tool = bc
+[difftool]
+	prompt = false
+	bc = trustExitCode
+[merge]
+	tool = bc
+[mergetool]
+	bc = trustExitCode
