@@ -10,7 +10,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/goyo.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-latex/vim-latex'
+Plug 'lervag/vimtex'
 Plug 'rhysd/vim-clang-format'
 Plug 'jphustman/dbext.vim'
 Plug 'tpope/vim-surround'
@@ -48,8 +48,13 @@ let g:airline_powerline_fonts = 1
 
 let g:Show_diagnostics_ui = 1
 
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
 if has("nvim-0.5.0") || has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
   set signcolumn=number
 else
   set signcolumn=yes

@@ -1,6 +1,4 @@
 # Install oh-my-fish and thefuck
 curl -L https://get.oh-my.fish | fish
-omf i thefuck pure
+omf install
 
-# Copy over all config files in /etc
-sudo cp -r ~/.yadm/etc/* /etc/

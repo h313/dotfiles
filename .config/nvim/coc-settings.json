@@ -9,26 +9,15 @@
         "sh"
       ]
     },
-    "svls": {
-      "command": "svls",
-      "filetypes": [
-        "systemverilog"
-      ]
-    },
-    "clangd": {
-      "command": "clangd",
+    "cmake": {
+      "command": "cmake-language-server",
+      "filetypes": ["cmake"],
       "rootPatterns": [
-        "compile_flags.txt",
-        "compile_commands.json"
+        "build/"
       ],
-      "filetypes": [
-        "c",
-        "cc",
-        "cpp",
-        "c++",
-        "objc",
-        "objcpp"
-      ]
+      "initializationOptions": {
+        "buildDirectory": "build"
+      }
     },
     "dockerfile": {
       "command": "docker-langserver",
@@ -39,10 +28,11 @@
       "command": "texlab",
       "filetypes": ["tex", "bib", "plaintex", "context"]
     },
-    "rust": {
-      "command": "rust-analyzer",
-      "filetypes": ["rust"],
-      "rootPatterns": ["Cargo.toml"]
+    "svls": {
+      "command": "svls",
+      "filetypes": [
+        "systemverilog"
+      ]
     }
   }
 }

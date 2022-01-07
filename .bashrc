@@ -10,6 +10,7 @@ PS1='[\u@\h \W]\$ '
 
 export GEM_PATH=/usr/lib/ruby/gems/2.4.0/
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export PATH=$PATH:/home/harry/.local/bin
 
 alias kys=poweroff
 alias yolo='git commit -am "DEAL WITH IT" && git push -f origin master'
@@ -34,6 +35,11 @@ source /etc/modules/init/bash_completion
 source /usr/share/doc/pkgfile/command-not-found.bash
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx
+  export _JAVA_AWT_WM_NONREPARENTING=1
+
+  export TERMINAL=/usr/bin/kitty
+  export EDITOR=/usr/bin/nvim
+
+  exec sway
 fi
 
