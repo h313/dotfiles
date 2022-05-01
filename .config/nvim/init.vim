@@ -45,8 +45,8 @@ let g:tex_flavor = "latex"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='alduin'
 let g:airline_powerline_fonts = 1
-
-let g:Show_diagnostics_ui = 1
+set noshowmode
+set laststatus=3
 
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
@@ -60,9 +60,12 @@ else
   set signcolumn=yes
 endif
 
+let g:coc_global_extensions = ['coc-clangd', 'coc-tsserver', 'coc-json', 'coc-html', 'coc-css', 'coc-pyright', 'coc-markdownlint', 'coc-ltex']
+let g:coc_filetype_map = {'tex': 'latex'}
+let g:ale_ignore_lsp = 1
+
 if has('nvim')
   inoremap <silent><expr> <c-space> coc#refresh()
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
-

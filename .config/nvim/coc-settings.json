@@ -8,7 +8,7 @@
       "filetypes": [
         "sh"
       ]
-    },
+    }, 
     "cmake": {
       "command": "cmake-language-server",
       "filetypes": ["cmake"],
@@ -28,11 +28,17 @@
       "command": "texlab",
       "filetypes": ["tex", "bib", "plaintex", "context"]
     },
-    "svls": {
-      "command": "svls",
-      "filetypes": [
-        "systemverilog"
-      ]
+    "svlangserver": {
+      "command": "svlangserver",
+      "filetypes": ["systemverilog"],
+      "settings": {
+        "systemverilog.includeIndexing": ["**/*.{sv,svh}"],
+        "systemverilog.excludeIndexing": ["test/**/*.sv*"],
+        "systemverilog.defines" : [],
+        "systemverilog.launchConfiguration": "verilator -sv -Wall --lint-only",
+        "systemverilog.formatCommand": "verible-verilog-format"
+      }
     }
-  }
+  },
+  "diagnostic.displayByAle": true
 }
