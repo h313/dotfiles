@@ -8,38 +8,18 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-export GEM_PATH=/usr/lib/ruby/gems/2.4.0/
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
-export PATH=$PATH:/home/harry/.local/bin
 
-alias kys=poweroff
-alias yolo='git commit -am "DEAL WITH IT" && git push -f origin master'
-alias grep='grep --color=auto'
-alias ls='ls --color=auto --group-directories-first -N'
-alias ll='ls -l'
-alias la='ls -A'
-alias lf='ls -F'
-alias l.='ls -d .*'
-alias lh='ls -lh'
-alias lr='ls -R'
-alias l='ls'
+export $(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)
+
+alias kys='poweroff'
+alias grep='rg --color=auto'
+alias ls='exa --color=auto --group-directories-first'
 alias mkdir='mkdir -p'
 
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
+alias vim='nvim'
+alias vimdiff='nvim -d'
+alias yolo='git commit -am "DEAL WITH IT" && git push -f origin master'
 
 eval "$(thefuck --alias)"
-
-source /etc/modules/init/bash
-source /etc/modules/init/bash_completion
-source /usr/share/doc/pkgfile/command-not-found.bash
-
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  export _JAVA_AWT_WM_NONREPARENTING=1
-
-  export TERMINAL=/usr/bin/kitty
-  export EDITOR=/usr/bin/nvim
-
-  exec sway
-fi
 

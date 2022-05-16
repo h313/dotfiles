@@ -8,16 +8,6 @@
       "filetypes": [
         "sh"
       ]
-    }, 
-    "cmake": {
-      "command": "cmake-language-server",
-      "filetypes": ["cmake"],
-      "rootPatterns": [
-        "build/"
-      ],
-      "initializationOptions": {
-        "buildDirectory": "build"
-      }
     },
     "dockerfile": {
       "command": "docker-langserver",
