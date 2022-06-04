@@ -14,10 +14,6 @@
       "filetypes": ["dockerfile"],
       "args": ["--stdio"]
     },
-    "latex": {
-      "command": "texlab",
-      "filetypes": ["tex", "bib", "plaintex", "context"]
-    },
     "svlangserver": {
       "command": "svlangserver",
       "filetypes": ["systemverilog"],

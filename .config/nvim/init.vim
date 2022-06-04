@@ -15,6 +15,7 @@ Plug 'rhysd/vim-clang-format'
 Plug 'jphustman/dbext.vim'
 Plug 'tpope/vim-surround'
 Plug 'ryanoasis/vim-devicons'
+Plug 'whonore/Coqtail'
 
 call plug#end()
 
@@ -60,7 +61,7 @@ else
   set signcolumn=yes
 endif
 
-let g:coc_global_extensions = ['coc-clangd', 'coc-tsserver', 'coc-json', 'coc-html', 'coc-css', 'coc-pyright', 'coc-markdownlint', 'coc-ltex', 'coc-cmake']
+let g:coc_global_extensions = ['coc-clangd', 'coc-tsserver', 'coc-json', 'coc-html', 'coc-css', 'coc-pyright', 'coc-markdownlint', 'coc-ltex', 'coc-cmake', 'coc-texlab']
 let g:coc_filetype_map = {'tex': 'latex'}
 let g:ale_ignore_lsp = 1
 
