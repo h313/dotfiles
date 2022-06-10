@@ -14,7 +14,6 @@ Plug 'lervag/vimtex'
 Plug 'rhysd/vim-clang-format'
 Plug 'jphustman/dbext.vim'
 Plug 'tpope/vim-surround'
-Plug 'ryanoasis/vim-devicons'
 Plug 'whonore/Coqtail'
 
 call plug#end()
