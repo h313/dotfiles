@@ -1,4 +1,3 @@
 package bass
 package foreign-env
 package python
-theme pure
