@@ -1,20 +1,20 @@
 call plug#begin()
 
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
-Plug 'chrisbra/csv.vim'
-Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'junegunn/goyo.vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'lervag/vimtex'
-Plug 'rhysd/vim-clang-format'
-Plug 'jphustman/dbext.vim'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-surround'
 Plug 'whonore/Coqtail'
+Plug 'rhysd/vim-clang-format'
+Plug 'chrisbra/csv.vim'
+Plug 'lervag/vimtex'
+Plug 'jphustman/dbext.vim'
 
 call plug#end()
 
@@ -43,6 +43,7 @@ nnoremap <C-l> :TlistToggle<CR>
 set grepprg=grep\ -nH\ $*
 
 lua require("nvim-tree").setup()
+lua require('gitsigns').setup()
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='alduin'
