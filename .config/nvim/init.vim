@@ -5,8 +5,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'chrisbra/csv.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
 Plug 'junegunn/goyo.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
@@ -41,7 +41,8 @@ let Tlist_Close_On_Select = 1
 nnoremap <C-l> :TlistToggle<CR>
 
 set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"
+
+lua require("nvim-tree").setup()
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='alduin'
