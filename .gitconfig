@@ -22,3 +22,5 @@
 	bc = trustExitCode
 [mergetool "bc"]
 	trustExitCode = true
+[commit]
+	gpgSign = true

@@ -1,10 +1,5 @@
 {
   "languageserver": {
-    "dockerfile": {
-      "command": "docker-langserver",
-      "filetypes": ["dockerfile"],
-      "args": ["--stdio"]
-    },
     "svlangserver": {
       "command": "svlangserver",
       "filetypes": ["systemverilog"],
