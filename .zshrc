@@ -1,5 +1,3 @@
-
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -98,6 +96,15 @@ fi
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
+alias kys='poweroff'
+alias grep='rg --color=auto'
+alias ls='exa --color=auto --group-directories-first'
+alias mkdir='mkdir -p'
+
+alias vim='nvim'
+alias vimdiff='nvim -d'
+alias yolo='git commit -am "DEAL WITH IT" && git push -f origin master'
 
 eval $(thefuck --alias)
 

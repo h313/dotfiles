@@ -8,11 +8,6 @@
 GPG_TTY=$(tty)
 export GPG_TTY
 
-alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
-
-export DOTNET_CLI_TELEMETRY_OPTOUT=1
-
 alias kys='poweroff'
 alias grep='rg --color=auto'
 alias ls='exa --color=auto --group-directories-first'
