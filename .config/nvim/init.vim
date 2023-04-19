@@ -47,7 +47,6 @@ lua require('gitsigns').setup()
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='alduin'
-let g:airline_powerline_fonts = 1
 set noshowmode
 set laststatus=3
 
