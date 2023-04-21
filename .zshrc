@@ -47,7 +47,7 @@ eval "$(starship init zsh)"
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -70,7 +70,7 @@ eval "$(starship init zsh)"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git colored-man-pages command-not-found zsh-autosuggestions zsh-syntax-highlighting)
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
@@ -98,13 +98,11 @@ fi
 # For a full list of active aliases, run `alias`.
 
 alias kys='poweroff'
+alias yolo='git commit -am "DEAL WITH IT" && git push -f origin master'
+
 alias grep='rg --color=auto'
 alias ls='exa --color=auto --group-directories-first'
 alias mkdir='mkdir -p'
-
-alias vim='nvim'
-alias vimdiff='nvim -d'
-alias yolo='git commit -am "DEAL WITH IT" && git push -f origin master'
 
 eval $(thefuck --alias)
 
