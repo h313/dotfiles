@@ -12,18 +12,40 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
+  use { 'wbthomason/packer.nvim' }
 
   use {
-    'neoclide/coc.nvim',
-    branch = 'release'
+    'williamboman/mason.nvim',
+    run = ':MasonUpdate',
+    requires = {
+      'williamboman/mason-lspconfig.nvim',
+      'neovim/nvim-lspconfig'
+    },
+    config = function()
+      require('mason').setup()
+    end
   }
 
   use {
-    'dense-analysis/ale',
-    ft = {'sh', 'zsh', 'bash', 'c', 'cpp', 'cmake', 'html', 'markdown', 'racket', 'vim', 'tex'},
-    cmd = 'ALEEnable',
-    config = 'vim.cmd[[ALEEnable]]'
+    'glepnir/lspsaga.nvim',
+    opt = true,
+    branch = 'main',
+    event = 'LspAttach',
+    config = function()
+      require('lspsaga').setup({})
+    end,
+    requires = {
+      'nvim-tree/nvim-web-devicons',
+      'nvim-treesitter/nvim-treesitter'
+    }
+  }
+
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    config = function()
+        require('null-ls').setup()
+    end,
+    requires = { 'nvim-lua/plenary.nvim' },
   }
 
   use {
@@ -34,7 +56,25 @@ return require('packer').startup(function(use)
     end,
     config = function()
       require('nvim-treesitter.configs').setup({
-        ensure_installed = { "bash", "c", "cmake", "cpp", "gitcommit", "gitignore", "json", "latex", "llvm", "make", "markdown", "verilog", "vim"},
+        ensure_installed = {
+          'bash',
+          'c',
+          'cmake',
+          'cpp',
+          'css',
+          'gitcommit',
+          'gitignore',
+          'html',
+          'json',
+          'latex',
+          'llvm',
+          'make',
+          'markdown',
+          'markdown_inline',
+          'toml',
+          'verilog',
+          'vim'
+        },
         sync_install = false,
         auto_install = true,
         highlight = {
@@ -50,7 +90,15 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons',
     },
     config = function()
-      require("nvim-tree").setup()
+      require('nvim-tree').setup()
+    end
+  }
+
+  use {
+    'folke/trouble.nvim',
+    requires = 'nvim-tree/nvim-web-devicons',
+    config = function()
+      require('trouble').setup()
     end
   }
 
@@ -77,18 +125,18 @@ return require('packer').startup(function(use)
   }
 
   use {
-    "kylechui/nvim-surround",
-    tag = "*",
+    'kylechui/nvim-surround',
+    tag = '*',
     config = function()
-      require("nvim-surround").setup()
+      require('nvim-surround').setup()
     end
   }
 
-  use {'junegunn/goyo.vim'}
+  use { 'junegunn/goyo.vim' }
 
-  use {'lervag/vimtex'}
+  use { 'lervag/vimtex' }
 
-  use {'whonore/Coqtail'}
+  use { 'whonore/Coqtail' }
 
   if packer_bootstrap then
     require('packer').sync()
