@@ -2,11 +2,17 @@
   "languageserver": {
     "svlangserver": {
       "command": "svlangserver",
-      "filetypes": ["systemverilog"],
+      "filetypes": [
+        "systemverilog"
+      ],
       "settings": {
-        "systemverilog.includeIndexing": ["**/*.{sv,svh}"],
-        "systemverilog.excludeIndexing": ["test/**/*.sv*"],
-        "systemverilog.defines" : [],
+        "systemverilog.includeIndexing": [
+          "**/*.{sv,svh}"
+        ],
+        "systemverilog.excludeIndexing": [
+          "test/**/*.sv*"
+        ],
+        "systemverilog.defines": [],
         "systemverilog.launchConfiguration": "verilator -sv -Wall --lint-only",
         "systemverilog.formatCommand": "verible-verilog-format"
       }

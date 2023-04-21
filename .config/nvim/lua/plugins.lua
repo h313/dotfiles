@@ -32,6 +32,16 @@ return require('packer').startup(function(use)
       local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
       ts_update()
     end,
+    config = function()
+      require('nvim-treesitter.configs').setup({
+        ensure_installed = { "bash", "c", "cmake", "cpp", "gitcommit", "gitignore", "json", "latex", "llvm", "make", "markdown", "verilog", "vim"},
+        sync_install = false,
+        auto_install = true,
+        highlight = {
+          enable = true,
+        },
+      })
+    end
   }
 
   use {
@@ -40,7 +50,7 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons',
     },
     config = function()
-      require("nvim-tree").setup {}
+      require("nvim-tree").setup()
     end
   }
 
@@ -53,18 +63,28 @@ return require('packer').startup(function(use)
 
   use {
     'lewis6991/gitsigns.nvim',
-    config = function()
+    run = function()
       require('gitsigns').setup()
     end
   }
 
+  use {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.1',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
+
+  use {
+    "kylechui/nvim-surround",
+    tag = "*",
+    config = function()
+      require("nvim-surround").setup()
+    end
+  }
+
   use {'junegunn/goyo.vim'}
-
-  use {'ctrlpvim/ctrlp.vim'}
-
-  use {'tpope/vim-surround'}
-
-  use {'chrisbra/csv.vim'}
 
   use {'lervag/vimtex'}
 

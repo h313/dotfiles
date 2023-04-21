@@ -1,4 +1,5 @@
 require('plugins')
+require('keybinds')
 
 vim.opt.clipboard:append {'unnamedplus'}
 vim.opt.mouse = 'a'
@@ -24,6 +25,7 @@ vim.opt.termguicolors = true
 vim.opt.grepprg = 'grep\\ -nH\\ $*'
 
 vim.g['airline#extensions#tabline#enabled'] = 1
+vim.g['airline_powerline_fonts'] = 1
 vim.g['airline_theme'] = 'alduin'
 
 vim.opt.conceallevel = 1
@@ -36,6 +38,7 @@ vim.g.coc_global_extensions = {
   'coc-clangd',
   'coc-pyright',
   'coc-sh',
+  'coc-sumneko-lua',
   'coc-cmake',
   'coc-tsserver',
   'coc-json',
@@ -46,12 +49,6 @@ vim.g.coc_global_extensions = {
   'coc-ltex'
 }
 
-vim.api.nvim_set_keymap('i', '<c-space>', 'coc#refresh()',
-  { silent = true, expr = true, noremap = true })
-
-vim.api.nvim_set_keymap('i', '<CR>', 'coc#pum#visible() ? coc#pum#confirm() : "\\<CR>"',
-  { silent = true, expr = true, noremap = true })
-
 vim.cmd([[
 augroup highlight_yank
   autocmd!
@@ -59,22 +56,14 @@ augroup highlight_yank
 augroup END
 ]])
 
-require('nvim-treesitter.configs').setup({
-    ensure_installed = { "bash", "c", "cmake", "cpp", "gitcommit", "gitignore", "json", "latex", "llvm", "make", "markdown", "verilog", "vim"},
-    sync_install = false,
-    auto_install = true,
-    highlight = {
-        enable = true,
-    },
-})
-
 vim.opt.foldmethod = 'expr'
+vim.opt.foldenable = false
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
-vim.api.nvim_create_autocmd({'BufEnter','BufAdd','BufNew','BufNewFile','BufWinEnter'}, {
+vim.api.nvim_create_autocmd({'BufEnter', 'BufAdd', 'BufNew', 'BufNewFile', 'BufWinEnter'}, {
   group = vim.api.nvim_create_augroup('TS_FOLD_WORKAROUND', {}),
   callback = function()
-    vim.opt.foldmethod     = 'expr'
-    vim.opt.foldexpr       = 'nvim_treesitter#foldexpr()'
+    vim.opt.foldmethod = 'expr'
+    vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
   end
 })
 
