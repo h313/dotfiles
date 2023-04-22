@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-eval "$(starship init zsh)"
+ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,9 +70,9 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages command-not-found zsh-autosuggestions zsh-syntax-highlighting)
-
+plugins=(git colored-man-pages command-not-found thefuck zsh-autosuggestions zsh-syntax-highlighting starship)
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -103,6 +103,4 @@ alias yolo='git commit -am "DEAL WITH IT" && git push -f origin master'
 alias grep='rg --color=auto'
 alias ls='exa --color=auto --group-directories-first'
 alias mkdir='mkdir -p'
-
-eval $(thefuck --alias)
 
