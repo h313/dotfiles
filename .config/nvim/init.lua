@@ -3,6 +3,7 @@ require('lsp')
 require('keybinds')
 
 vim.opt.clipboard:append {'unnamedplus'}
+vim.o.ttymouse = 'xterm2'
 vim.o.mouse = 'a'
 
 vim.o.shiftwidth = 2
