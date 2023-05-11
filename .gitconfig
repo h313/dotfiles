@@ -12,15 +12,12 @@
 [pull]
 	rebase = false
 [diff]
-	tool = bc
+  tool = nvimdiff
 [difftool]
-	prompt = false
-	bc = trustExitCode
+  prompt = true
 [merge]
-	tool = bc
+	tool = nvimdiff2
 [mergetool]
-	bc = trustExitCode
-[mergetool "bc"]
-	trustExitCode = true
-[commit]
-	gpgSign = true
+	keepBackup = false
+	prompt = false
+
