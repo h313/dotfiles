@@ -12,11 +12,11 @@
 [pull]
 	rebase = false
 [diff]
-  tool = nvimdiff
+  tool = smerge
 [difftool]
   prompt = true
 [merge]
-	tool = nvimdiff2
+	tool = smerge
 [mergetool]
 	keepBackup = false
 	prompt = false
