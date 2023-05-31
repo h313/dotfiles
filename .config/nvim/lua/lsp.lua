@@ -1,34 +1,109 @@
-local null_ls = require("null-ls")
+local lspconfig = require('lspconfig')
+local null_ls = require('null-ls')
+local luasnip = require('luasnip')
+local cmp = require('cmp')
 
 require('mason').setup()
-require('mason-lspconfig').setup({
-  ensure_installed = {
-    'bashls',
-    'clangd',
-    'cmake',
-    'cssls',
-    'dockerls',
-    'jsonls',
-    'ltex',
-    'lua_ls',
-    'marksman',
-    'pyright',
-    'svlangserver',
-    'texlab',
-    'tsserver',
-    'yamlls'
+require('mason-lspconfig').setup()
+
+local cmp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+lspconfig['bashls'].setup({
+  capabilities = cmp_capabilities
+})
+lspconfig['clangd'].setup({
+  capabilities = cmp_capabilities
+})
+lspconfig['cmake'].setup({
+  capabilities = cmp_capabilities
+})
+lspconfig['cssls'].setup({
+  capabilities = cmp_capabilities
+})
+lspconfig['dockerls'].setup({
+  capabilities = cmp_capabilities
+})
+lspconfig['html'].setup({
+  capabilities = cmp_capabilities
+})
+lspconfig['jsonls'].setup({
+  capabilities = cmp_capabilities
+})
+lspconfig['ltex'].setup({
+  settings = {
+    ltex = {
+      language = 'en-US'
+    }
   }
 })
-
-require('mason-lspconfig').setup_handlers({
-  function (server_name)
-    require('lspconfig')[server_name].setup {}
-  end
+lspconfig['lua_ls'].setup({
+  settings = {
+    telemetry = {
+      enable = false,
+    }
+  },
+  capabilities = cmp_capabilities
 })
+lspconfig['marksman'].setup({
+  capabilities = cmp_capabilities
+})
+lspconfig['pyright'].setup({
+  capabilities = cmp_capabilities
+})
+lspconfig['svls'].setup({
+  capabilities = cmp_capabilities
+})
+lspconfig['texlab'].setup({
+  capabilities = cmp_capabilities
+})
+lspconfig['tsserver'].setup({
+  capabilities = cmp_capabilities
+})
+lspconfig['yamlls'].setup({})
 
 null_ls.setup({
   sources = {
     null_ls.builtins.code_actions.gitrebase,
     null_ls.builtins.code_actions.gitsigns
-  },
+  }
 })
+
+cmp.setup {
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-u>'] = cmp.mapping.scroll_docs(-4), -- Up
+    ['<C-d>'] = cmp.mapping.scroll_docs(4), -- Down
+    -- C-b (back) C-f (forward) for snippet placeholder navigation.
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    },
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+  }),
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  },
+}

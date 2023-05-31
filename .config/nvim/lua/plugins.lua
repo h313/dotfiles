@@ -27,6 +27,15 @@ return require('packer').startup(function(use)
   }
 
   use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-nvim-lsp',
+      'saadparwaiz1/cmp_luasnip',
+      'L3MON4D3/LuaSnip'
+    }
+  }
+
+  use {
     'glepnir/lspsaga.nvim',
     opt = true,
     branch = 'main',
