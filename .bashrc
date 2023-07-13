@@ -8,13 +8,11 @@
 GPG_TTY=$(tty)
 export GPG_TTY
 
-alias kys='poweroff'
 alias grep='rg --color=auto'
 alias ls='exa --color=auto --group-directories-first'
 alias mkdir='mkdir -p'
 
-alias vim='nvim'
-alias vimdiff='nvim -d'
+alias kys='poweroff'
 alias yolo='git commit -am "DEAL WITH IT" && git push -f origin master'
 
 eval "$(thefuck --alias)"
