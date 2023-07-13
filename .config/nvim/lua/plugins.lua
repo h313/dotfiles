@@ -35,19 +35,13 @@ return require('packer').startup(function(use)
     }
   }
 
-  use {
-    'glepnir/lspsaga.nvim',
-    opt = true,
-    branch = 'main',
-    event = 'LspAttach',
+  use ({
+    'nvimdev/lspsaga.nvim',
+    after = 'nvim-lspconfig',
     config = function()
       require('lspsaga').setup({})
     end,
-    requires = {
-      'nvim-tree/nvim-web-devicons',
-      'nvim-treesitter/nvim-treesitter'
-    }
-  }
+  })
 
   use {
     'jose-elias-alvarez/null-ls.nvim',
