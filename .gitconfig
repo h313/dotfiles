@@ -13,12 +13,12 @@
 	rebase = false
 [diff]
 	tool = nvimdiff
-	guitool = smerge
+	guitool = bc4
 [difftool]
 	prompt = true
 [merge]
 	tool = nvimdiff2
-	guitool = smerge
+	guitool = bc4
 [mergetool]
 	keepBackup = false
 	prompt = false

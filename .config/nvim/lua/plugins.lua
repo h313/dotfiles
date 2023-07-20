@@ -44,14 +44,6 @@ return require('packer').startup(function(use)
   })
 
   use {
-    'jose-elias-alvarez/null-ls.nvim',
-    config = function()
-        require('null-ls').setup()
-    end,
-    requires = { 'nvim-lua/plenary.nvim' },
-  }
-
-  use {
     'nvim-treesitter/nvim-treesitter',
     run = function()
       local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
