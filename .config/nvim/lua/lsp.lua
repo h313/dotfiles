@@ -1,5 +1,4 @@
 local lspconfig = require('lspconfig')
-local null_ls = require('null-ls')
 local luasnip = require('luasnip')
 local cmp = require('cmp')
 
@@ -60,13 +59,6 @@ lspconfig['tsserver'].setup({
   capabilities = cmp_capabilities
 })
 lspconfig['yamlls'].setup({})
-
-null_ls.setup({
-  sources = {
-    null_ls.builtins.code_actions.gitrebase,
-    null_ls.builtins.code_actions.gitsigns
-  }
-})
 
 cmp.setup {
   snippet = {
