@@ -1,54 +1,50 @@
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable',
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-local packer_bootstrap = ensure_packer()
-
-return require('packer').startup(function(use)
-  use { 'wbthomason/packer.nvim' }
-
-  use {
+local plugins = {
+  {
     'williamboman/mason.nvim',
-    run = ':MasonUpdate',
-    requires = {
+    dependencies = {
       'williamboman/mason-lspconfig.nvim',
       'neovim/nvim-lspconfig'
     },
     config = function()
       require('mason').setup()
     end
-  }
+  },
 
-  use {
+  {
     'hrsh7th/nvim-cmp',
-    requires = {
+    dependencies = {
       'hrsh7th/cmp-nvim-lsp',
       'saadparwaiz1/cmp_luasnip',
       'L3MON4D3/LuaSnip'
-    }
-  }
+    },
+    event = 'InsertEnter'
+  },
 
-  use ({
+  {
     'nvimdev/lspsaga.nvim',
-    after = 'nvim-lspconfig',
+    dependencies = {
+      'nvim-lspconfig'
+    },
     config = function()
       require('lspsaga').setup({})
-    end,
-  })
+    end
+  },
 
-  use {
+  {
     'nvim-treesitter/nvim-treesitter',
-    run = function()
-      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-      ts_update()
-    end,
     config = function()
       require('nvim-treesitter.configs').setup({
         ensure_installed = {
@@ -70,70 +66,82 @@ return require('packer').startup(function(use)
           'verilog',
           'vim'
         },
-        sync_install = false,
-        auto_install = true,
+        sync_install = true,
+        auto_install = false,
         highlight = {
           enable = true,
         },
       })
     end
-  }
+  },
 
-  use {
+  {
     'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons',
+    dependencies = {
+      'nvim-tree/nvim-web-devicons'
     },
     config = function()
       require('nvim-tree').setup()
     end
-  }
+  },
 
-  use {
+  {
     'folke/trouble.nvim',
-    requires = 'nvim-tree/nvim-web-devicons',
+    dependencies = {
+      'nvim-tree/nvim-web-devicons'
+    },
     config = function()
       require('trouble').setup()
     end
-  }
+  },
 
-  use {
+  {
     'vim-airline/vim-airline',
-    requires = {
-      'vim-airline/vim-airline-themes',
+    lazy = false,
+    priority = 1000,
+    dependencies = {
+      { 'vim-airline/vim-airline-themes' },
+      { 'nvim-tree/nvim-web-devicons' }
     },
-  }
+    config = function ()
+      vim.g['airline#extensions#tabline#enabled'] = true
+    end
+  },
 
-  use {
+  {
     'lewis6991/gitsigns.nvim',
     run = function()
       require('gitsigns').setup()
     end
-  }
+  },
 
-  use {
+  {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.1',
-    requires = {
+    dependencies = {
       'nvim-lua/plenary.nvim'
     }
-  }
+  },
 
-  use {
+  {
     'kylechui/nvim-surround',
-    tag = '*',
     config = function()
       require('nvim-surround').setup()
     end
-  }
+  },
 
-  use { 'junegunn/goyo.vim' }
+  { 'junegunn/goyo.vim' },
 
-  use { 'lervag/vimtex' }
+  { 'lervag/vimtex' },
 
-  use { 'whonore/Coqtail' }
+  { 'whonore/Coqtail' }
+}
 
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end)
+require('lazy').setup(plugins, {
+  ui = {
+    border = 'rounded',
+  },
+  checker = { enabled = true },
+  change_detection = { notify = false },
+  install = { colorscheme = { 'alduin' } },
+  debug = true
+})
