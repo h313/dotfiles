@@ -62,6 +62,7 @@ local plugins = {
           'make',
           'markdown',
           'markdown_inline',
+          'python',
           'toml',
           'verilog',
           'vim'
