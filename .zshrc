@@ -98,6 +98,6 @@ alias kys='poweroff'
 alias yolo='git commit -am "DEAL WITH IT" && git push -f origin master'
 
 alias grep='rg --color=auto'
-alias ls='exa --color=auto --group-directories-first'
+alias ls='eza --color=auto --group-directories-first'
 alias mkdir='mkdir -p'
 
