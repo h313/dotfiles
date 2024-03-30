@@ -48,6 +48,7 @@ local plugins = {
     config = function()
       require('nvim-treesitter.configs').setup({
         ensure_installed = {
+          'asm',
           'bash',
           'c',
           'cmake',
@@ -57,6 +58,7 @@ local plugins = {
           'gitignore',
           'html',
           'json',
+          'lua',
           'latex',
           'llvm',
           'make',
