@@ -134,6 +134,8 @@ local plugins = {
 
   { 'junegunn/goyo.vim' },
 
+  { 'tpope/vim-fugitive' },
+
   { 'lervag/vimtex' },
 
   { 'whonore/Coqtail' }
