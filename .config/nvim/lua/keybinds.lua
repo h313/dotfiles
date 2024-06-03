@@ -1,6 +1,6 @@
 local builtin = require('telescope.builtin')
 local actions = require("telescope.actions")
-local trouble = require("trouble.providers.telescope")
+local trouble = require("trouble.sources.telescope")
 local telescope = require("telescope")
 
 local keymap = vim.keymap.set
