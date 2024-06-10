@@ -7,13 +7,13 @@ require('mason-lspconfig').setup()
 
 local cmp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+lspconfig['asm_lsp'].setup({
+  capabilities = cmp_capabilities
+})
 lspconfig['bashls'].setup({
   capabilities = cmp_capabilities
 })
 lspconfig['clangd'].setup({
-  capabilities = cmp_capabilities
-})
-lspconfig['cmake'].setup({
   capabilities = cmp_capabilities
 })
 lspconfig['cssls'].setup({
@@ -46,6 +46,9 @@ lspconfig['lua_ls'].setup({
 lspconfig['marksman'].setup({
   capabilities = cmp_capabilities
 })
+lspconfig['neocmake'].setup({
+  capabilities = cmp_capabilities
+})
 lspconfig['pyright'].setup({
   capabilities = cmp_capabilities
 })
@@ -53,6 +56,9 @@ lspconfig['ruff_lsp'].setup({
   on_attach = function (client, buffer)
     client.server_capabilities.hoverProvider = false
   end,
+})
+lspconfig['rust_analyzer'].setup({
+  capabilities = cmp_capabilities
 })
 lspconfig['texlab'].setup({
   capabilities = cmp_capabilities
