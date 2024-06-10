@@ -67,7 +67,8 @@ local plugins = {
           'python',
           'toml',
           'verilog',
-          'vim'
+          'vim',
+          'yaml'
         },
         sync_install = true,
         auto_install = false,

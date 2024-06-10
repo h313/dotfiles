@@ -54,13 +54,13 @@ lspconfig['ruff_lsp'].setup({
     client.server_capabilities.hoverProvider = false
   end,
 })
-lspconfig['svls'].setup({
-  capabilities = cmp_capabilities
-})
 lspconfig['texlab'].setup({
   capabilities = cmp_capabilities
 })
 lspconfig['tsserver'].setup({
+  capabilities = cmp_capabilities
+})
+lspconfig['verible'].setup({
   capabilities = cmp_capabilities
 })
 lspconfig['yamlls'].setup({})

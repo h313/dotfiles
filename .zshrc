@@ -70,7 +70,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast colored-man-pages command-not-found thefuck zsh-autosuggestions zsh-syntax-highlighting starship eza bgnotify)
+plugins=(gitfast colored-man-pages command-not-found thefuck zsh-autosuggestions zsh-syntax-highlighting starship eza)
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
