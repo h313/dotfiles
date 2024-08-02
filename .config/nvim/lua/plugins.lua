@@ -135,6 +135,8 @@ local plugins = {
 
   { 'junegunn/goyo.vim' },
 
+  { 'LunarVim/bigfile.nvim' },
+
   { 'tpope/vim-fugitive' },
 
   { 'lervag/vimtex' },
