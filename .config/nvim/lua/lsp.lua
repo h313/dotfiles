@@ -63,7 +63,7 @@ lspconfig['rust_analyzer'].setup({
 lspconfig['texlab'].setup({
   capabilities = cmp_capabilities
 })
-lspconfig['tsserver'].setup({
+lspconfig['ts_ls'].setup({
   capabilities = cmp_capabilities
 })
 lspconfig['verible'].setup({
