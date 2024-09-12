@@ -28,13 +28,6 @@ lspconfig['html'].setup({
 lspconfig['jsonls'].setup({
   capabilities = cmp_capabilities
 })
-lspconfig['ltex'].setup({
-  settings = {
-    ltex = {
-      language = 'en-US'
-    }
-  }
-})
 lspconfig['lua_ls'].setup({
   settings = {
     telemetry = {
