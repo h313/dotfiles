@@ -74,7 +74,6 @@ local plugins = {
           'printf',
           'python',
           'systemtap',
-          'systemverilog',
           'tmux',
           'toml',
           'typescript',
