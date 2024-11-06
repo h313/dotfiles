@@ -45,7 +45,7 @@ lspconfig['neocmake'].setup({
 lspconfig['pyright'].setup({
   capabilities = cmp_capabilities
 })
-lspconfig['ruff_lsp'].setup({
+lspconfig['ruff'].setup({
   on_attach = function (client, buffer)
     client.server_capabilities.hoverProvider = false
   end,
