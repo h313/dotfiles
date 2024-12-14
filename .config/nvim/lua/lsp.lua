@@ -22,6 +22,10 @@ lspconfig['cssls'].setup({
 lspconfig['dockerls'].setup({
   capabilities = cmp_capabilities
 })
+lspconfig['gopls'].setup({
+  capabilities = cmp_capabilities
+})
+
 lspconfig['html'].setup({
   capabilities = cmp_capabilities
 })
@@ -62,7 +66,9 @@ lspconfig['ts_ls'].setup({
 lspconfig['verible'].setup({
   capabilities = cmp_capabilities
 })
-lspconfig['yamlls'].setup({})
+lspconfig['yamlls'].setup({
+  capabilities = cmp_capabilities
+})
 
 cmp.setup {
   snippet = {
