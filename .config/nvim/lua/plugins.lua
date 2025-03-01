@@ -74,6 +74,7 @@ local plugins = {
           'printf',
           'python',
           'systemtap',
+          'tablegen',
           'tmux',
           'toml',
           'typescript',

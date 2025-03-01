@@ -9,7 +9,7 @@ GPG_TTY=$(tty)
 export GPG_TTY
 
 alias grep='rg --color=auto'
-alias ls='exa --color=auto --group-directories-first'
+alias ls='eza --color=auto --group-directories-first'
 alias mkdir='mkdir -p'
 
 alias kys='poweroff'
