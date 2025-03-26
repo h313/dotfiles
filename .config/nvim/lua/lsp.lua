@@ -32,6 +32,9 @@ lspconfig['html'].setup({
 lspconfig['jsonls'].setup({
   capabilities = cmp_capabilities
 })
+lspconfig['ltex'].setup({
+  capabilities = cmp_capabilities
+})
 lspconfig['lua_ls'].setup({
   settings = {
     telemetry = {
