@@ -18,7 +18,7 @@ vim.wo.number = true
 vim.o.laststatus = 3
 vim.o.signcolumn = 'number'
 vim.o.updatetime = 100
-vim.o.completeopt = 'menu,menuone'
+vim.o.completeopt = "menuone,noselect,noinsert,popup,fuzzy"
 
 vim.cmd('filetype plugin indent on')
 vim.cmd('set noshowmode')
