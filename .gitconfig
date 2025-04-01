@@ -25,4 +25,5 @@
 [mergetool]
 	keepBackup = false
 	prompt = false
-
+[color]
+  ui = auto
