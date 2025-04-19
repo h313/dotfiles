@@ -1,7 +1,6 @@
 [user]
 	email = harry@h313.info
 	name = Haoda Wang
-	signingkey = C9E40FFEEFADBA5717D8DFC91459CA225259A153
 [pager]
 	diff = diff-so-fancy | less --tabs=1,5 -RFX
 	show = diff-so-fancy | less --tabs=1,5 -RFX
@@ -16,14 +15,14 @@
 	rebase = false
 [diff]
 	tool = nvimdiff
-  guitool = bc
+	guitool = bc
 [difftool]
 	prompt = true
 [merge]
-  tool = nvimdiff2
-  guitool = bc
+	tool = nvimdiff2
+	guitool = bc
 [mergetool]
 	keepBackup = false
 	prompt = false
 [color]
-  ui = auto
+	ui = auto
