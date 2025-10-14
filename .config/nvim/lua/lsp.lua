@@ -9,6 +9,7 @@ local lsps = {
   { 'dockerls' },
   { 'gopls' },
   { 'html' },
+  { 'jedi_language_server' },
   { 'jsonls' },
   { 'ltex' },
   {
@@ -23,7 +24,6 @@ local lsps = {
   },
   { 'marksman' },
   { 'neocmake' },
-  { 'pyright' },
   {
     'ruff',
     {
@@ -36,7 +36,8 @@ local lsps = {
   { 'texlab' },
   { 'ts_ls' },
   { 'verible' },
-  { 'yamlls' }
+  { 'yamlls' },
+  { 'zuban' }
 }
 
 for _, lsp in pairs(lsps) do
