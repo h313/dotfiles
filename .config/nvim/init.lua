@@ -56,3 +56,4 @@ vim.api.nvim_create_autocmd({'BufEnter', 'BufAdd', 'BufNew', 'BufNewFile', 'BufW
   end
 })
 
+vim.api.nvim_command('au Bufread,BufNewFile *.fpp{,i} set filetype=fpp')

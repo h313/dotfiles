@@ -1,3 +1,9 @@
+# Install neovim theme and syntax files
+mkdir -p ~/.config/nvim/colors
+wget -O ~/.config/nvim/colors/alduin.vim https://raw.githubusercontent.com/AlessandroYorba/Alduin/refs/heads/master/colors/alduin.vim
+mkdir -p ~/.config/nvim/syntax
+wget -O ~/.config/nvim/syntax/fpp.vim https://raw.githubusercontent.com/nasa/fpp/refs/heads/main/editors/vim/fpp.vim
+
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --keep-zshrc
 
