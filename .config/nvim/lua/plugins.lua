@@ -55,6 +55,7 @@ local plugins = {
 
   {
     'nvim-treesitter/nvim-treesitter',
+    branch = 'main',
     config = function()
       require('nvim-treesitter.config').setup({
         ensure_installed = {
