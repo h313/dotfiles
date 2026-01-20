@@ -11,7 +11,6 @@ local lsps = {
   { 'html' },
   { 'jedi_language_server' },
   { 'jsonls' },
-  { 'ltex' },
   {
     'lua_ls',
     {

@@ -85,11 +85,11 @@ local plugins = {
           'printf',
           'python',
           'systemtap',
+          'systemverilog',
           'tablegen',
           'tmux',
           'toml',
           'typescript',
-          'verilog',
           'vim',
           'yaml'
         },
