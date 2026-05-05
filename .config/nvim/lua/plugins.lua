@@ -3,7 +3,7 @@ vim.pack.add({
   'https://github.com/williamboman/mason-lspconfig.nvim',
   'https://github.com/neovim/nvim-lspconfig',
 
-  { src = 'https://github.com/saghen/blink.cmp', version = vim.version.range('1.0') },
+  { src = 'https://github.com/saghen/blink.cmp', version = vim.version.range('1.10') },
   'https://github.com/rafamadriz/friendly-snippets',
 
   'https://github.com/nvimdev/lspsaga.nvim',

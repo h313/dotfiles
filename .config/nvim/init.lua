@@ -2,6 +2,8 @@ require('plugins')
 require('lsp')
 require('keybinds')
 
+vim.cmd('call py3eval(\'0\')')
+
 vim.opt.clipboard:append {'unnamedplus'}
 vim.o.mouse = 'a'
 
