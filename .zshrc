@@ -97,9 +97,8 @@ export EDITOR='vim'
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+alias mkdir='mkdir -p'
+
 alias kys='poweroff'
 alias yolo='git commit -am "DEAL WITH IT" && git push -f origin master'
-
-alias grep='rg --color=auto'
-alias mkdir='mkdir -p'
 
