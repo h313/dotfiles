@@ -1,78 +1,60 @@
-local builtin = require('telescope.builtin')
-local actions = require("telescope.actions")
-local trouble = require("trouble.sources.telescope")
-local telescope = require("telescope")
+local fzf_lua = require('fzf-lua')
 
 local keymap = vim.keymap.set
 
-local on_attach = function(_, bufnr)
-  -- Create some shortcut functions.
-  -- NOTE: The `vim` variable is supplied by Neovim.
-  local function buf_set_keymap(...)
-    vim.api.nvim_buf_set_keymap(bufnr, ...)
-  end
-  local function buf_set_option(...)
-    vim.api.nvim_buf_set_option(bufnr, ...)
-  end
+-- K (hover), grn (rename), gra (code action), grr/gri/grt (references/impl/type-def),
+-- gO (document symbols), and i_CTRL-S (signature help) are native Neovim LSP defaults
+-- (see :h lsp-defaults) and need no keymap here. 'omnifunc' is likewise set automatically.
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('UserLspAttach', {}),
+  callback = function(ev)
+    local opts = { buffer = ev.buf, silent = true }
 
-  -- Enable completion triggered by <c-x><c-o>
-  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+    -- jump to definition
+    keymap('n', 'gd', vim.lsp.buf.definition, opts)
 
-  local opts = { noremap=true, silent=true }
+    -- Format buffer
+    keymap('n', '<F3>', vim.lsp.buf.format, opts)
 
-  -- ======================= The Keymaps =========================
-  -- jump to definition
-  buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+    -- Jump LSP diagnostics
+    keymap('n', '[g', function() vim.diagnostic.jump({ count = -1, float = true }) end, opts)
+    keymap('n', ']g', function() vim.diagnostic.jump({ count = 1, float = true }) end, opts)
 
-  -- Format buffer
-  buf_set_keymap('n', '<F3>', '<cmd>lua vim.lsp.buf.format()<CR>', opts)
+    -- Rename symbol
+    keymap('n', '<leader>rn', vim.lsp.buf.rename, opts)
 
-  -- Jump LSP diagnostics
-  -- NOTE: Currently, there is a bug in lspsaga.diagnostic module. Thus we use
-  --       Vim commands to move through diagnostics.
-  buf_set_keymap('n', '[g', ':Lspsaga diagnostic_jump_prev<CR>', opts)
-  buf_set_keymap('n', ']g', ':Lspsaga diagnostic_jump_next<CR>', opts)
+    -- Find references (combined refs/def/impl view)
+    keymap('n', 'gr', fzf_lua.lsp_finder, opts)
 
-  -- Rename symbol
-  buf_set_keymap('n', '<leader>rn', "<cmd>lua require('lspsaga.rename').rename()<CR>", opts)
+    -- codeaction
+    keymap('n', '<leader>ac', vim.lsp.buf.code_action, opts)
+    keymap('v', '<leader>a', vim.lsp.buf.code_action, opts)
+  end,
+})
 
-  -- Find references
-  buf_set_keymap('n', 'gr', '<cmd>lua require("lspsaga.provider").lsp_finder()<CR>', opts)
+-- Floating terminal (not LSP-specific, so bound globally rather than on LspAttach)
+keymap({ 'n', 't' }, '<A-d>', function() Snacks.terminal() end, { silent = true })
 
-  -- Doc popup scrolling
-  buf_set_keymap('n', 'K', "<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>", opts)
-  buf_set_keymap('n', '<C-f>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>", opts)
-  buf_set_keymap('n', '<C-b>', "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>", opts)
+keymap('n', '<leader>ff', fzf_lua.files, {})
+keymap('n', '<leader>fg', fzf_lua.live_grep, {})
+keymap('n', '<leader>fb', fzf_lua.buffers, {})
+keymap('n', '<leader>fh', fzf_lua.help_tags, {})
 
-  -- codeaction
-  buf_set_keymap('n', '<leader>ac', "<cmd>lua require('lspsaga.codeaction').code_action()<CR>", opts)
-  buf_set_keymap('v', '<leader>a', ":<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>", opts)
+keymap('n', '<leader>e', function() Snacks.explorer() end, {})
+Snacks.toggle.zen():map('<leader>z')
 
-  -- Floating terminal
-  -- NOTE: Use `vim.cmd` since `buf_set_keymap` is not working with `tnoremap...`
-  vim.cmd [[
-  nnoremap <silent> <A-d> <cmd>lua require('lspsaga.floaterm').open_float_terminal()<CR>
-  tnoremap <silent> <A-d> <C-\><C-n>:lua require('lspsaga.floaterm').close_float_terminal()<CR>
-  ]]
-end
+keymap("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", {silent = true, noremap = true})
+keymap("n", "<leader>xw", "<cmd>Trouble diagnostics toggle<cr>", {silent = true, noremap = true})
+keymap("n", "<leader>xd", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",{silent = true, noremap = true})
+keymap("n", "<leader>xl", "<cmd>Trouble loclist toggle<cr>",{silent = true, noremap = true})
+keymap("n", "<leader>xq", "<cmd>Trouble qflist toggle<cr>",{silent = true, noremap = true})
+keymap("n", "gR", "<cmd>Trouble lsp_references toggle<cr>",{silent = true, noremap = true})
 
-keymap('n', '<leader>ff', builtin.find_files, {})
-keymap('n', '<leader>fg', builtin.live_grep, {})
-keymap('n', '<leader>fb', builtin.buffers, {})
-keymap('n', '<leader>fh', builtin.help_tags, {})
-
-keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", {silent = true, noremap = true})
-keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", {silent = true, noremap = true})
-keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",{silent = true, noremap = true})
-keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",{silent = true, noremap = true})
-keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",{silent = true, noremap = true})
-keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",{silent = true, noremap = true})
-
-telescope.setup {
-  defaults = {
-    mappings = {
-      i = { ["<c-t>"] = trouble.open_with_trouble },
-      n = { ["<c-t>"] = trouble.open_with_trouble },
+fzf_lua.setup {
+  actions = {
+    files = {
+      -- overrides fzf-lua's default ctrl-t (open in tab) to send results to Trouble instead
+      ["ctrl-t"] = require("trouble.sources.fzf").actions.open,
     },
   },
 }

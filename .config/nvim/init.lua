@@ -4,6 +4,8 @@ require('keybinds')
 
 vim.cmd('call py3eval(\'0\')')
 
+vim.g.mapleader = '\\'
+
 vim.opt.clipboard:append {'unnamedplus'}
 vim.o.mouse = 'a'
 
@@ -30,10 +32,6 @@ vim.o.termguicolors = true
 vim.cmd([[colorscheme alduin]])
 
 vim.opt.grepprg = 'grep\\ -nH\\ $*'
-
-vim.g['airline#extensions#tabline#enabled'] = 1
-vim.g['airline_powerline_fonts'] = 1
-vim.g['airline_theme'] = 'alduin'
 
 vim.opt.conceallevel = 1
 vim.g.tex_flavor = 'xelatex'

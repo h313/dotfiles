@@ -9,7 +9,6 @@ local lsps = {
   { 'dockerls' },
   { 'gopls' },
   { 'html' },
-  { 'jedi_language_server' },
   { 'jsonls' },
   {
     'ltex_plus',
@@ -84,7 +83,7 @@ local lsps = {
   },
   { 'rust_analyzer' },
   { 'texlab' },
-  { 'ts_ls' },
+  { 'vtsls' },
   { 'verible' },
   { 'yamlls' },
   { 'zuban' }

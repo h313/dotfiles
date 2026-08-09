@@ -1,34 +1,34 @@
+-- Coqtail stays installed (below) for ftdetect/syntax/basic ftplugin only;
+-- vsrocq.nvim handles actual proof interaction. Must be set before Coqtail loads.
+vim.g.loaded_coqtail = 1
+vim.g.coqtail_supported = 0
+
 vim.pack.add({
-  'https://github.com/williamboman/mason.nvim',
-  'https://github.com/williamboman/mason-lspconfig.nvim',
+  'https://github.com/mason-org/mason.nvim',
+  'https://github.com/mason-org/mason-lspconfig.nvim',
   'https://github.com/neovim/nvim-lspconfig',
 
   { src = 'https://github.com/saghen/blink.cmp', version = vim.version.range('1.10') },
   'https://github.com/rafamadriz/friendly-snippets',
 
-  'https://github.com/nvimdev/lspsaga.nvim',
-
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter', version = 'main' },
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter-textobjects', version = 'main' },
 
   'https://github.com/nvim-tree/nvim-web-devicons',
-  'https://github.com/nvim-tree/nvim-tree.lua',
   'https://github.com/folke/trouble.nvim',
+  'https://github.com/folke/snacks.nvim',
 
-  'https://github.com/vim-airline/vim-airline',
-  'https://github.com/vim-airline/vim-airline-themes',
+  'https://github.com/nvim-lualine/lualine.nvim',
 
   'https://github.com/lewis6991/gitsigns.nvim',
 
-  'https://github.com/nvim-lua/plenary.nvim',
-  'https://github.com/nvim-telescope/telescope.nvim',
+  'https://github.com/ibhagwan/fzf-lua',
 
   'https://github.com/kylechui/nvim-surround',
-  'https://github.com/junegunn/goyo.vim',
-  'https://github.com/LunarVim/bigfile.nvim',
   'https://github.com/tpope/vim-fugitive',
   'https://github.com/lervag/vimtex',
   'https://github.com/whonore/Coqtail',
+  'https://github.com/tomtomjhj/vsrocq.nvim',
 })
 
 -- Plugin configuration
@@ -46,8 +46,6 @@ require('blink.cmp').setup({
   },
   fuzzy = { implementation = "prefer_rust_with_warning" }
 })
-
-require('lspsaga').setup({})
 
 require('nvim-treesitter.config').setup({
   ensure_installed = {
@@ -161,12 +159,53 @@ require('nvim-treesitter.config').setup({
   }
 })
 
-require('nvim-tree').setup()
-
 require('trouble').setup()
 
-vim.g['airline#extensions#tabline#enabled'] = true
+require('snacks').setup({
+  explorer = {},
+  zen = {},
+  image = { enabled = true },
+})
+
+require('lualine').setup({
+  options = {
+    theme = 'auto',
+    globalstatus = true,
+  },
+  tabline = {
+    lualine_a = {
+      {
+        'buffers',
+        buffers_color = {
+          active = 'Visual',
+          inactive = 'TabLine',
+        },
+      },
+    },
+    lualine_z = {
+      {
+        'tabs',
+        tabs_color = {
+          active = 'Visual',
+          inactive = 'TabLine',
+        },
+      },
+    },
+  },
+})
 
 require('gitsigns').setup()
 
 require('nvim-surround').setup()
+
+-- Calls lspconfig's vscoqtop.setup() internally; do not configure vscoqtop separately.
+require('vsrocq').setup({
+  lsp = {
+    on_attach = function(_, bufnr)
+      vim.keymap.set({ 'n', 'i' }, '<C-M-j>', '<cmd>VsRocq stepForward<CR>', { buffer = bufnr, desc = 'VsRocq step forward' })
+      vim.keymap.set({ 'n', 'i' }, '<C-M-k>', '<cmd>VsRocq stepBackward<CR>', { buffer = bufnr, desc = 'VsRocq step backward' })
+      vim.keymap.set({ 'n', 'i' }, '<C-M-l>', '<cmd>VsRocq interpretToPoint<CR>', { buffer = bufnr, desc = 'VsRocq interpret to point' })
+      vim.keymap.set({ 'n', 'i' }, '<C-M-g>', '<cmd>VsRocq interpretToEnd<CR>', { buffer = bufnr, desc = 'VsRocq interpret to end' })
+    end,
+  },
+})
