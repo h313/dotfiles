@@ -43,6 +43,8 @@ keymap('n', '<leader>fh', fzf_lua.help_tags, {})
 keymap('n', '<leader>e', function() Snacks.explorer() end, {})
 Snacks.toggle.zen():map('<leader>z')
 
+keymap('n', '<leader>gb', '<cmd>Gitsigns toggle_current_line_blame<cr>', { silent = true, desc = 'Toggle git blame' })
+
 keymap("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", {silent = true, noremap = true})
 keymap("n", "<leader>xw", "<cmd>Trouble diagnostics toggle<cr>", {silent = true, noremap = true})
 keymap("n", "<leader>xd", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",{silent = true, noremap = true})
