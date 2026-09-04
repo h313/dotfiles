@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Jump LSP diagnostics
     keymap('n', '[g', function() vim.diagnostic.jump({ count = -1, float = true }) end, opts)
-    keymap('n', ']g', function() vim.diagnostic.jump({ count = 1, float = true }) end, opts)
+    keymap('n', ']g', function() vim.diagnostic.jump({ count = 3, float = true }) end, opts)
 
     -- Rename symbol
     keymap('n', '<leader>rn', vim.lsp.buf.rename, opts)

@@ -1,5 +1,3 @@
--- Coqtail stays installed (below) for ftdetect/syntax/basic ftplugin only;
--- vsrocq.nvim handles actual proof interaction. Must be set before Coqtail loads.
 vim.g.loaded_coqtail = 1
 vim.g.coqtail_supported = 0
 
@@ -198,8 +196,12 @@ require('gitsigns').setup()
 
 require('nvim-surround').setup()
 
--- Calls lspconfig's vscoqtop.setup() internally; do not configure vscoqtop separately.
 require('vsrocq').setup({
+  vsrocq = {
+    proof = {
+      mode = "Continuous"
+    }
+  },
   lsp = {
     on_attach = function(_, bufnr)
       vim.keymap.set({ 'n', 'i' }, '<C-M-j>', '<cmd>VsRocq stepForward<CR>', { buffer = bufnr, desc = 'VsRocq step forward' })
