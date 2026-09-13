@@ -46,11 +46,8 @@ Snacks.toggle.zen():map('<leader>z')
 keymap('n', '<leader>gb', '<cmd>Gitsigns toggle_current_line_blame<cr>', { silent = true, desc = 'Toggle git blame' })
 
 keymap("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", {silent = true, noremap = true})
-keymap("n", "<leader>xw", "<cmd>Trouble diagnostics toggle<cr>", {silent = true, noremap = true})
-keymap("n", "<leader>xd", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",{silent = true, noremap = true})
-keymap("n", "<leader>xl", "<cmd>Trouble loclist toggle<cr>",{silent = true, noremap = true})
-keymap("n", "<leader>xq", "<cmd>Trouble qflist toggle<cr>",{silent = true, noremap = true})
-keymap("n", "gR", "<cmd>Trouble lsp_references toggle<cr>",{silent = true, noremap = true})
+keymap("n", "<leader>xi", "<cmd>Trouble lsp_implementations toggle<cr>",{silent = true, noremap = true})
+keymap("n", "<leader>xr", "<cmd>Trouble lsp_references toggle<cr>",{silent = true, noremap = true})
 
 fzf_lua.setup {
   actions = {
