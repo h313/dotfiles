@@ -1,10 +1,10 @@
+vim.g.mapleader = '\\'
+
 require('plugins')
 require('lsp')
 require('keybinds')
 
 vim.cmd('call py3eval(\'0\')')
-
-vim.g.mapleader = '\\'
 
 vim.opt.clipboard:append {'unnamedplus'}
 vim.o.mouse = 'a'
@@ -12,48 +12,32 @@ vim.o.mouse = 'a'
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 vim.o.expandtab = true
-vim.o.autoindent = true
 vim.o.smartindent = true
 
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.wo.number = true
+vim.o.number = true
 vim.o.laststatus = 3
 vim.o.signcolumn = 'number'
 vim.o.updatetime = 100
 vim.o.completeopt = 'menu,menuone'
 
-vim.cmd('filetype plugin indent on')
-vim.cmd('set noshowmode')
+vim.o.showmode = false
 
-vim.o.background = 'dark'
-vim.o.termguicolors = true
-vim.cmd([[colorscheme alduin]])
-
-vim.opt.grepprg = 'grep\\ -nH\\ $*'
+-- alduin sets background=dark itself; termguicolors is auto-detected
+vim.cmd.colorscheme('alduin')
 
 vim.opt.conceallevel = 1
-vim.g.tex_flavor = 'xelatex'
+vim.g.tex_flavor = 'latex'
 vim.g.vimtex_quickfix_mode = 0
 vim.g.tex_conceal = 'abdmg'
 
-vim.cmd([[
-augroup highlight_yank
-  autocmd!
-  autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
-augroup END
-]])
-
-vim.opt.foldmethod = 'expr'
-vim.opt.foldenable = false
-vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
-vim.api.nvim_create_autocmd({'BufEnter', 'BufAdd', 'BufNew', 'BufNewFile', 'BufWinEnter'}, {
-  group = vim.api.nvim_create_augroup('TS_FOLD_WORKAROUND', {}),
-  callback = function()
-    vim.opt.foldmethod = 'expr'
-    vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
-  end
+vim.api.nvim_create_autocmd('TextYankPost', {
+  group = vim.api.nvim_create_augroup('highlight_yank', {}),
+  callback = function() vim.hl.on_yank() end,
 })
 
-vim.api.nvim_command('au Bufread,BufNewFile *.fpp{,i} set filetype=fpp')
+vim.opt.foldenable = false
+
+vim.filetype.add({ extension = { fpp = 'fpp', fppi = 'fpp' } })
