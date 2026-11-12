@@ -19,7 +19,9 @@ vim.o.smartcase = true
 
 vim.o.number = true
 vim.o.laststatus = 3
-vim.o.signcolumn = 'number'
+vim.o.relativenumber = true
+vim.o.signcolumn = 'yes:1'
+vim.o.statuscolumn = '%=%{v:relnum ? v:relnum : v:lnum} %s'
 vim.o.updatetime = 100
 vim.o.completeopt = 'menu,menuone'
 
